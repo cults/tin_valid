@@ -4,6 +4,7 @@ Features:
 - Add Germany 🇩🇪
 - Add Greece 🇬🇷
 - Add Hungary 🇭🇺
+- Add Ireland 🇮🇪
 
 ## [0.1.0] - 2025-04-14
 

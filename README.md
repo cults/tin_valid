@@ -13,6 +13,7 @@ Validate Tax Identification Numbers (TINs) for the following European countries:
 - Germany 🇩🇪
 - Greece 🇬🇷
 - Hungary 🇭🇺
+- Ireland 🇮🇪
 - Sweden 🇸🇪
 
 See also the [descriptions of the structure provided by the European
