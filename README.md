@@ -1,18 +1,19 @@
-# TinValid
+# TinValid 🇪🇺
 
 Validate Tax Identification Numbers (TINs) for the following European countries:
 
-- Austria
-- Belgium
-- Bulgaria
-- Croatia
-- Cyprus
-- Czechia
-- Denmark
-- Estonia
-- Germany
-- Greece
-- Sweden
+- Austria 🇦🇹
+- Belgium 🇧🇪
+- Bulgaria 🇧🇬
+- Croatia 🇭🇷
+- Cyprus 🇨🇾
+- Czechia 🇨🇿
+- Denmark 🇩🇰
+- Estonia 🇪🇪
+- Germany 🇩🇪
+- Greece 🇬🇷
+- Hungary 🇭🇺
+- Sweden 🇸🇪
 
 See also the [descriptions of the structure provided by the European
 Union](https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-taxation/taxpayer-identification-number-tin_en).
