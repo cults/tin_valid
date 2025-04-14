@@ -29,6 +29,9 @@ gem install tin_valid
 
 ## Usage
 
+This validates as per the [descriptions of the structure provided by the
+European Union](https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-taxation/taxpayer-identification-number-tin_en).
+
 ```rb
 # Austria
 TinValid::AustriaTin.new(tin: "…").valid?
@@ -80,10 +83,10 @@ git commits and the created tag, and push the `.gem` file to
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at
-https://github.com/sunny/tin_valid. This project is intended to be a safe,
+https://github.com/cults/tin_valid. This project is intended to be a safe,
 welcoming space for collaboration, and contributors are expected to adhere to
 the
-[code of conduct](https://github.com/sunny/tin_valid/blob/main/CODE_OF_CONDUCT.md).
+[code of conduct](https://github.com/cults/tin_valid/blob/main/CODE_OF_CONDUCT.md).
 
 ## License
 
@@ -94,4 +97,4 @@ The gem is available as open source under the terms of the
 
 Everyone interacting in the TinValid project's codebases, issue trackers, chat
 rooms and mailing lists is expected to follow the
-[code of conduct](https://github.com/sunny/tin_valid/blob/main/CODE_OF_CONDUCT.md).
+[code of conduct](https://github.com/cults/tin_valid/blob/main/CODE_OF_CONDUCT.md).
