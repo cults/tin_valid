@@ -10,6 +10,7 @@ Validate Tax Identification Numbers (TINs) for the following European countries:
 - Czechia
 - Denmark
 - Estonia
+- Germany
 - Sweden
 
 See also the [descriptions of the structure provided by the European
