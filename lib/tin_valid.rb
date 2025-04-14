@@ -1,0 +1,18 @@
+# frozen_string_literal: true
+
+require "date"
+require_relative "tin_valid/version"
+require_relative "tin_valid/austria_tin"
+require_relative "tin_valid/belgium_tin"
+require_relative "tin_valid/bulgaria_tin"
+require_relative "tin_valid/croatia_tin"
+require_relative "tin_valid/cyprus_tin"
+require_relative "tin_valid/czechia_tin"
+require_relative "tin_valid/denmark_tin"
+require_relative "tin_valid/estonia_tin"
+require_relative "tin_valid/sweden_tin"
+
+module TinValid
+  class Error < StandardError; end
+  # Your code goes here...
+end

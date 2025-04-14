@@ -1,0 +1,63 @@
+plugins:
+  - rubocop-rspec
+  - rubocop-rake
+
+AllCops:
+  TargetRubyVersion: 3.1
+  NewCops: enable
+
+# Layout
+
+Layout/MultilineMethodCallIndentation:
+  # On multiline calls, indent starting from the receiver.
+  # E.g.:
+  #   while apples_and_oranges
+  #           .sorted_by_color
+  #           .ripe
+  #           .pick
+  #     # …
+  #   end
+  EnforcedStyle: indented_relative_to_receiver
+  Exclude:
+    - spec/**/*
+
+# Metrics
+
+Metrics/BlockLength:
+  # Limit the number of lines in a block.
+  Exclude:
+    - spec/**/*
+
+# Style
+
+Style/Documentation:
+  # Do not require a comment for every class.
+  Enabled: false
+
+Style/NumericPredicate:
+  # Prefer `== 0` over `.zero?`.
+  EnforcedStyle: comparison
+
+Style/RegexpLiteral:
+  # Allow using %r{…} or /…/ for regular expressions.
+  EnforcedStyle: mixed
+
+Style/StringLiterals:
+  # Prefer "double quotes" over 'single quotes'.
+  EnforcedStyle: double_quotes
+
+Style/TrailingCommaInArguments:
+  # Prefer trailing commas in multiline arguments:
+  #   call(
+  #     a: 1,
+  #     b: 2,
+  #   )
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/TrailingCommaInArrayLiteral:
+  # Prefer trailing commas in arrays:
+  #   [
+  #     1,
+  #     2,
+  #   ]
+  EnforcedStyleForMultiline: diff_comma
