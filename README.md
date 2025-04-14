@@ -12,9 +12,12 @@ Validate Tax Identification Numbers (TINs) for the following European countries:
 - Estonia
 - Sweden
 
+See also the [descriptions of the structure provided by the European
+Union](https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-taxation/taxpayer-identification-number-tin_en).
+
 ## Installation
 
-Install the gem and add to the application's Gemfile by executing:
+Add the gem to your application’s Gemfile by executing:
 
 ```bash
 bundle add tin_valid
@@ -28,9 +31,6 @@ gem install tin_valid
 ```
 
 ## Usage
-
-This validates as per the [descriptions of the structure provided by the
-European Union](https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-taxation/taxpayer-identification-number-tin_en).
 
 ```rb
 # Austria
