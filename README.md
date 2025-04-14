@@ -11,6 +11,7 @@ Validate Tax Identification Numbers (TINs) for the following European countries:
 - Denmark
 - Estonia
 - Germany
+- Greece
 - Sweden
 
 See also the [descriptions of the structure provided by the European
