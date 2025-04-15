@@ -1,14 +1,27 @@
 # frozen_string_literal: true
 
 module TinValid
-  class AustriaTin < Data.define(:tin)
-    def valid?
-      return false unless /\A[0-9]{9}\z/.match?(tin)
+  class AustriaTin
+    def initialize(tin:)
+      @tin = tin
+    end
 
-      tin[-1] == check
+    attr_reader :tin
+
+    def valid?
+      return false unless MATCHER.match?(normalized)
+
+      normalized[-1] == check
+    end
+
+    def normalized
+      @normalized ||= tin.to_s.strip.tr("-/", "")
     end
 
     private
+
+    MATCHER = %r{\A[0-9]{2}-?[0-9]{3}/?[0-9]{4}\z}
+    private_constant :MATCHER
 
     # rubocop:disable Metrics/AbcSize
     def check
@@ -22,10 +35,10 @@ module TinValid
       # - C7: 1
       # - C8: 2
       values_by_weight =
-        tin
-          .chars
+        normalized
+          .chars[..-2]
           .each_with_index
-          .map { |n, i| n.to_i * (i.even? ? 2 : 1) }
+          .map { |n, i| n.to_i * (i.even? ? 1 : 2) }
 
       # 2. If the product of a doubling operation is > 9, sum the digits of the
       # product;

@@ -38,7 +38,8 @@ gem install tin_valid
 
 ```rb
 # Austria
-TinValid::AustriaTin.new(tin: "…").valid?
+TinValid::AustriaTin.new(tin: "93-173/6581").valid? # => true
+TinValid::AustriaTin.new(tin: "93-173/6581").normalized # => "931736581"
 
 # Belgium
 # Optional birth_date
