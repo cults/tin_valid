@@ -8,6 +8,11 @@ AllCops:
 
 # Layout
 
+Layout/LineLength:
+  Max: 80
+  Exclude:
+    - bin/rspec
+
 Layout/MultilineMethodCallIndentation:
   # On multiline calls, indent starting from the receiver.
   # E.g.:
