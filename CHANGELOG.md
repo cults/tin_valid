@@ -2,6 +2,7 @@
 
 Features:
 - Add Latvia 🇱🇻
+- Add Luxembourg 🇱🇺
 
 ## [0.1.1] - 2025-04-15
 
