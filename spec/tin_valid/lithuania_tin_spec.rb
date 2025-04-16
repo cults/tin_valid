@@ -1,15 +1,18 @@
 # frozen_string_literal: true
 
-RSpec.describe TinValid::BulgariaTin do
+RSpec.describe TinValid::LithuaniaTin do
   describe "#valid?" do
     valid_values = [
-      ["7501010010", nil],
-      ["7501010010", Date.new(1975, 1, 1)],
+      ["10101010005", nil],
+      ["10101010005", Date.new(2001, 1, 1)],
     ]
 
     invalid_values = [
-      ["7501010019", nil],
-      ["7501010010", Date.new(1975, 1, 2)],
+      ["101010100059", nil],
+      ["1010101000", nil],
+      ["10101010005", Date.new(2001, 1, 2)],
+      [nil, nil],
+      ["", nil],
     ]
 
     valid_values.each do |(tin, birth_date)|
@@ -24,9 +27,9 @@ RSpec.describe TinValid::BulgariaTin do
       context(
         "with invalid #{tin.inspect} and birth date #{birth_date.inspect}",
       ) do
-        it do
+        it {
           expect(described_class.new(tin:, birth_date:).valid?).to be(false)
-        end
+        }
       end
     end
   end
