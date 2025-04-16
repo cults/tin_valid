@@ -14,12 +14,9 @@ Validate Tax Identification Numbers (TINs) for the following European countries:
 - Greece 🇬🇷
 - Hungary 🇭🇺
 - Ireland 🇮🇪
-<<<<<<< Updated upstream
 - Latvia 🇱🇻
-||||||| Stash base
-=======
 - Lithuania 🇱🇹
->>>>>>> Stashed changes
+- Luxembourg 🇱🇺
 - Sweden 🇸🇪
 
 See also the [descriptions of the structure provided by the European
@@ -92,6 +89,10 @@ TinValid::LatviaTin.new(tin: "…", birth_date: Date.new(…)).valid?
 # Lithuania
 # Optional birth_date
 TinValid::LithuaniaTin.new(tin: "…", birth_date: Date.new(…)).valid?
+
+# Luxembourg
+# Optional birth_date
+TinValid::LuxembourgTin.new(tin: "…", birth_date: Date.new(…)).valid?
 
 # Sweden
 # Optional birth_date
