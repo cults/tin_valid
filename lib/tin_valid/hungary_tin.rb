@@ -11,8 +11,6 @@ module TinValid
     private
 
     def check
-      tin[..-2].chars
-
       # 1. Multiply the values of each position by the corresponding weight:
       # 2. Add up the results of the above multiplications;
       result = (1..9).each_with_index.sum { |num, i| num * tin[i].to_i }
