@@ -17,6 +17,7 @@ Validate Tax Identification Numbers (TINs) for the following European countries:
 - Latvia 🇱🇻
 - Lithuania 🇱🇹
 - Luxembourg 🇱🇺
+- Malta 🇲🇹
 - Sweden 🇸🇪
 
 See also the [descriptions of the structure provided by the European
@@ -93,6 +94,9 @@ TinValid::LithuaniaTin.new(tin: "…", birth_date: Date.new(…)).valid?
 # Luxembourg
 # Optional birth_date
 TinValid::LuxembourgTin.new(tin: "…", birth_date: Date.new(…)).valid?
+
+# Malta
+TinValid::MaltaTin.new(tin: "…").valid?
 
 # Sweden
 # Optional birth_date
