@@ -1,5 +1,8 @@
 ## [Unreleased]
 
+Features:
+- Add Latvia 🇱🇻
+
 ## [0.1.1] - 2025-04-15
 
 Features:
