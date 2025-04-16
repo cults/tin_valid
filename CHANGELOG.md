@@ -5,6 +5,7 @@ Features:
 - Add Luxembourg 🇱🇺
 - Add Lithuania 🇱🇹
 - Add Malta 🇲🇹
+- Add Netherlands 🇳🇱
 
 ## [0.1.1] - 2025-04-15
 
