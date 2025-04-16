@@ -48,13 +48,16 @@ module TinValid
         # 3. Multiply the result by 2;
         result *= 2
 
-        # 4. Take modulo 11 of the result. Update the value of variable X with the result of this operation;
+        # 4. Take modulo 11 of the result. Update the value of variable X with
+        # the result of this operation;
         x = result % 11
 
         # 5. Take C2 + X modulo 10. If result is 0, result is 10;
         # 6. Multiply the result by 2;
-        # 7. Take modulo 11 of the result. Update the value of variable X with the result of this operation;
-        # 8. Apply steps 5, 6 and 7 in an analogue way for digits C3 to C10. Consider that last value called Y;
+        # 7. Take modulo 11 of the result. Update the value of variable X with
+        # the result of this operation;
+        # 8. Apply steps 5, 6 and 7 in an analogue way for digits C3 to C10.
+        # Consider that last value called Y;
         x
       end
 

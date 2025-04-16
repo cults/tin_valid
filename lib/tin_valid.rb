@@ -15,6 +15,7 @@ require_relative "tin_valid/greece_tin"
 require_relative "tin_valid/hungary_tin"
 require_relative "tin_valid/ireland_tin"
 require_relative "tin_valid/latvia_tin"
+require_relative "tin_valid/lithuania_tin"
 require_relative "tin_valid/luxembourg_tin"
 require_relative "tin_valid/sweden_tin"
 
