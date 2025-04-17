@@ -1,6 +1,7 @@
 ## [Unreleased]
 
 Features:
+- Add Italy 🇮🇹
 - Add Latvia 🇱🇻
 - Add Luxembourg 🇱🇺
 - Add Lithuania 🇱🇹
