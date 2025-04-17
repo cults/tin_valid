@@ -8,6 +8,7 @@ Features:
 - Add Netherlands 🇳🇱
 - Add Poland 🇵🇱
 - Add Portugal 🇵🇹
+- Add Romania 🇷🇴
 
 ## [0.1.1] - 2025-04-15
 
