@@ -9,6 +9,7 @@ Features:
 - Add Poland 🇵🇱
 - Add Portugal 🇵🇹
 - Add Romania 🇷🇴
+- Add Slovakia 🇸🇰
 
 ## [0.1.1] - 2025-04-15
 
