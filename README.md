@@ -21,6 +21,7 @@ Validate Tax Identification Numbers (TINs) for the following European countries:
 - Netherlands 🇳🇱
 - Poland 🇵🇱
 - Portugal 🇵🇹
+- Romania 🇷🇴
 - Sweden 🇸🇪
 
 See also the [descriptions of the structure provided by the European
@@ -110,6 +111,10 @@ TinValid::PolandTin.new(tin: "…", birth_date: Date.new(…)).valid?
 
 # Portugal
 TinValid::PortugalTin.new(tin: "…").valid?
+
+# Romania
+# Optional birth_date
+TinValid::RomaniaTin.new(tin: "…", birth_date: Date.new(…)).valid?
 
 # Sweden
 # Optional birth_date
