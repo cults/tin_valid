@@ -4,11 +4,13 @@ RSpec.describe TinValid::ItalyTin do
   describe "#valid?" do
     valid_values = [
       ["DMLPRY77D15H501F", nil],
+      ["DMLPRY77D15H501F", Date.new(1977, 4, 15)],
     ]
 
     invalid_values = [
       ["DMLPRY77D15H501", nil],
       ["DMLPRY77D15H501F9", nil],
+      ["DMLPRY77D15H501F", Date.new(1977, 4, 16)],
       [nil, nil],
       ["", nil],
     ]

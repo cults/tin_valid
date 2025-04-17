@@ -33,7 +33,7 @@ module TinValid
       day -= 40 if day > 40
 
       if birth_date
-        date?("#{birth_century}#{year}", month, day)
+        birth_date == date("#{birth_century}#{year}", month, day)
       else
         date?("19#{year}", month, day) || date?("20#{year}", month, day)
       end
@@ -61,8 +61,12 @@ module TinValid
     end
 
     def date?(year, month, day)
-      date = Date.new(year.to_i, month.to_i, day.to_i)
-      date < Date.today
+      found_date = date(year, month, day)
+      found_date && found_date < Date.today
+    end
+
+    def date(year, month, day)
+      Date.new(year.to_i, month.to_i, day.to_i)
     rescue Date::Error
       nil
     end
