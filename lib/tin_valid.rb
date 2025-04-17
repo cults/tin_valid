@@ -22,6 +22,7 @@ require_relative "tin_valid/netherlands_tin"
 require_relative "tin_valid/poland_tin"
 require_relative "tin_valid/portugal_tin"
 require_relative "tin_valid/romania_tin"
+require_relative "tin_valid/slovakia_tin"
 require_relative "tin_valid/sweden_tin"
 
 module TinValid; end
