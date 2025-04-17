@@ -7,6 +7,7 @@ Features:
 - Add Malta 🇲🇹
 - Add Netherlands 🇳🇱
 - Add Poland 🇵🇱
+- Add Portugal 🇵🇹
 
 ## [0.1.1] - 2025-04-15
 
