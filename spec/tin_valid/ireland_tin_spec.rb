@@ -17,6 +17,8 @@ RSpec.describe TinValid::IrelandTin do
       "1234577A",
       "1234572WW",
       "1234577AA",
+      "000000000",
+      "123456789",
       nil,
       "",
     ]

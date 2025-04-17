@@ -10,6 +10,8 @@ RSpec.describe TinValid::PortugalTin do
       "299999999",
       "29999999",
       "2999999989",
+      "000000000",
+      "123456789",
       nil,
       "",
     ]

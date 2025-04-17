@@ -11,6 +11,10 @@ RSpec.describe TinValid::CzechiaTin do
     invalid_values = [
       ["420901999999", nil],
       ["4209019999", Date.new(1942, 9, 1)],
+      ["000000000", nil],
+      ["0000000000", nil],
+      ["123456789", nil],
+      ["1234567890", nil],
       [nil, nil],
       ["", nil],
     ]

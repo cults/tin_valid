@@ -19,6 +19,8 @@ RSpec.describe TinValid::CyprusTin do
       ["60123129H", "individual"],
       ["99652159X", nil],
       ["99652159X", "individual"],
+      ["000000000", nil],
+      ["123456789", nil],
       [nil, nil],
       ["", nil],
     ]

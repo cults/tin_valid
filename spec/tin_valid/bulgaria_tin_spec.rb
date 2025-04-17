@@ -8,8 +8,14 @@ RSpec.describe TinValid::BulgariaTin do
     ]
 
     invalid_values = [
+      ["750101001", nil],
+      ["75010100101", nil],
       ["7501010019", nil],
       ["7501010010", Date.new(1975, 1, 2)],
+      ["0000000000", nil],
+      ["1234567890", nil],
+      [nil, nil],
+      ["", nil],
     ]
 
     valid_values.each do |(tin, birth_date)|

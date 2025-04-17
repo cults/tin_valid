@@ -1,5 +1,8 @@
 ## [Unreleased]
 
+Fixes:
+- Test against clearly invalid codes 00000… and 123456…
+
 ## [1.0.0] - 2025-04-17
 
 Features:

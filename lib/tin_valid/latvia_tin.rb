@@ -35,6 +35,7 @@ module TinValid
     def valid_v1?
       match = MATCHER_V1.match(tin)
       return false unless match
+      return false if tin == "00000000000"
 
       if birth_date
         tin[..5] == birth_date.strftime("%d%m%y") &&

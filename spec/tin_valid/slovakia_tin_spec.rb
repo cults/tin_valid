@@ -11,8 +11,8 @@ RSpec.describe TinValid::SlovakiaTin do
       ["281203054", nil],
       ["281203/054", nil],
       ["286203054", nil],
-      ["1234567890", nil],
-      ["1234567890", Date.new(1900, 1, 1)],
+      ["9234567890", nil],
+      ["9234567890", Date.new(1900, 1, 1)],
     ]
 
     invalid_values = [
@@ -24,6 +24,10 @@ RSpec.describe TinValid::SlovakiaTin do
       ["771116/742", nil],
       ["281203054", Date.new(1928, 12, 4)],
       ["12345678901", nil],
+      ["0000000000", nil],
+      ["000000000", nil],
+      ["1234567890", nil],
+      ["123456789", nil],
       [nil, nil],
       ["", nil],
     ]
