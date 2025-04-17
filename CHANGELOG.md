@@ -12,6 +12,7 @@ Features:
 - Add Slovakia 🇸🇰
 - Add Slovenia 🇸🇮
 - Add Spain 🇪🇸
+- Add United Kingdom 🇬🇧
 
 ## [0.1.1] - 2025-04-15
 

@@ -26,6 +26,7 @@ Validate Tax Identification Numbers (TINs) for the following European countries:
 - Slovenia 🇸🇮
 - Spain 🇪🇸
 - Sweden 🇸🇪
+- United Kingdom 🇬🇧
 
 See also the [descriptions of the structure provided by the European
 Union](https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-taxation/taxpayer-identification-number-tin_en).
@@ -132,6 +133,9 @@ TinValid::SpainTin.new(tin: "…").valid?
 # Sweden
 # Optional birth_date
 TinValid::SwedenTin.new(tin: "…", birth_date: Date.new(…)).valid?
+
+# United Kingdom
+TinValid::UnitedKingdomTin.new(tin: "…").valid?
 ```
 
 ## Development
