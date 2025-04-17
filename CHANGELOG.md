@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+## [1.0.0] - 2025-04-17
+
 Features:
 - Add Italy 🇮🇹
 - Add Latvia 🇱🇻
@@ -22,7 +24,6 @@ Features:
 - Add Greece 🇬🇷
 - Add Hungary 🇭🇺
 - Add Ireland 🇮🇪
-- Add #normalized to Austria 🇦🇹
 
 ## [0.1.0] - 2025-04-14
 
