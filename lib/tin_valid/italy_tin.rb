@@ -35,7 +35,7 @@ module TinValid
       if birth_date
         birth_date == date("#{birth_century}#{year}", month, day)
       else
-        date?("19#{year}", month, day) || date?("20#{year}", month, day)
+        date("19#{year}", month, day) || date("20#{year}", month, day)
       end
     end
 
@@ -60,13 +60,9 @@ module TinValid
       string.chars.map { NUMERICAL_REPLACEMENTS.fetch(_1, _1) }.join.to_i
     end
 
-    def date?(year, month, day)
-      found_date = date(year, month, day)
-      found_date && found_date < Date.today
-    end
-
     def date(year, month, day)
-      Date.new(year.to_i, month.to_i, day.to_i)
+      found_date = Date.new(year.to_i, month.to_i, day.to_i)
+      found_date if found_date < Date.today
     rescue Date::Error
       nil
     end

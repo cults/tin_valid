@@ -65,7 +65,8 @@ module TinValid
       # birth).
       day = 1 if day == "00"
 
-      Date.new(year.to_i, month.to_i, day.to_i)
+      found_date = Date.new(year.to_i, month.to_i, day.to_i)
+      found_date if found_date < Date.today
     rescue Date::Error
       nil
     end

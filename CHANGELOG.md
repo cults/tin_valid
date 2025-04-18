@@ -1,6 +1,7 @@
 ## [Unreleased]
 
 Features:
+- Add Finland 🇫🇮
 - Add France 🇫🇷
 
 Fixes:
