@@ -1,10 +1,15 @@
 # frozen_string_literal: true
 
 module TinValid
-  class LuxembourgTin < Data.define(:tin, :birth_date)
+  class LuxembourgTin
+    include TinValid::Helpers
+
     def initialize(tin:, birth_date: nil)
-      super
+      @tin = tin
+      @birth_date = birth_date
     end
+
+    attr_reader :tin, :birth_date
 
     def valid?
       match = MATCHER.match(tin)
@@ -67,13 +72,6 @@ module TinValid
       # 4. Check digit c if c = 0, C13 is valid. Otherwise, the TIN is not
       # valid.
       checksum == 0
-    end
-
-    def date(year, month, day)
-      found_date = Date.new(year.to_i, month.to_i, day.to_i)
-      found_date if found_date < Date.today
-    rescue Date::Error
-      nil
     end
 
     def table_d(number_i, number_j) = TABLE_D.dig(number_i, number_j)

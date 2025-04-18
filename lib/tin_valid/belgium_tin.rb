@@ -2,6 +2,8 @@
 
 module TinValid
   class BelgiumTin
+    include TinValid::Helpers
+
     def initialize(tin:, birth_date: nil)
       @tin = tin
       @birth_date = birth_date
@@ -37,6 +39,15 @@ module TinValid
     def check = match[:check].to_i
 
     def valid_check?(year, month, day, number)
+      # A month (in the range 00...12, 00 is acceptable for person not born in
+      # Belgium and with an uncertain date of birth).
+      month = 1 if month == "00"
+
+      # A day of month (in the range 00...31 depending on month and year, 00 is
+      # acceptable for person not born in Belgium and with an uncertain date of
+      # birth).
+      day = 1 if day == "00"
+
       tin_date = date(year, month, day)
       return false if tin_date.nil?
       return false if birth_date && birth_date != tin_date
@@ -54,21 +65,5 @@ module TinValid
     #
     # 2. 97 - remainder of the previous division is the check number
     def digit_check(number) = 97 - (number.to_i % 97)
-
-    def date(year, month, day)
-      # A month (in the range 00...12, 00 is acceptable for person not born in
-      # Belgium and with an uncertain date of birth).
-      month = 1 if month == "00"
-
-      # A day of month (in the range 00...31 depending on month and year, 00 is
-      # acceptable for person not born in Belgium and with an uncertain date of
-      # birth).
-      day = 1 if day == "00"
-
-      found_date = Date.new(year.to_i, month.to_i, day.to_i)
-      found_date if found_date < Date.today
-    rescue Date::Error
-      nil
-    end
   end
 end

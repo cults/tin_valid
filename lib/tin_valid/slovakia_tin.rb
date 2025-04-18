@@ -1,10 +1,15 @@
 # frozen_string_literal: true
 
 module TinValid
-  class SlovakiaTin < Data.define(:tin, :birth_date)
+  class SlovakiaTin
+    include TinValid::Helpers
+
     def initialize(tin:, birth_date: nil)
-      super
+      @tin = tin
+      @birth_date = birth_date
     end
+
+    attr_reader :tin, :birth_date
 
     def valid?
       return false if %w[0000000000 000000000 1234567890].include?(tin)
@@ -58,12 +63,5 @@ module TinValid
     def valid_v2? = MATCHER_V2.match?(tin)
 
     def birth_century = birth_date.year.to_s[..1]
-
-    def date(year, month, day)
-      found_date = Date.new(year.to_i, month.to_i, day.to_i)
-      found_date if found_date < Date.today
-    rescue Date::Error
-      nil
-    end
   end
 end

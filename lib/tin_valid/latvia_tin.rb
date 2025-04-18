@@ -1,10 +1,13 @@
 # frozen_string_literal: true
 
 module TinValid
-  class LatviaTin < Data.define(:tin, :birth_date)
+  class LatviaTin
     def initialize(tin:, birth_date: nil)
-      super
+      @tin = tin
+      @birth_date = birth_date
     end
+
+    attr_reader :tin, :birth_date
 
     def valid? = valid_v1? || valid_v2?
 

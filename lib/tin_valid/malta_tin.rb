@@ -1,7 +1,13 @@
 # frozen_string_literal: true
 
 module TinValid
-  class MaltaTin < Data.define(:tin)
+  class MaltaTin
+    def initialize(tin:)
+      @tin = tin
+    end
+
+    attr_reader :tin
+
     def valid? = valid_format_1? || valid_format_2?
 
     private

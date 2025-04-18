@@ -1,10 +1,15 @@
 # frozen_string_literal: true
 
 module TinValid
-  class CzechiaTin < Data.define(:tin, :birth_date)
+  class CzechiaTin
+    include TinValid::Helpers
+
     def initialize(tin:, birth_date: nil)
-      super
+      @tin = tin
+      @birth_date = birth_date
     end
+
+    attr_reader :tin, :birth_date
 
     def valid? = valid_v1? || valid_v2?
 
@@ -79,13 +84,6 @@ module TinValid
       else
         number
       end
-    end
-
-    def date(year, month, day)
-      found_date = Date.new(year.to_i, month.to_i, day.to_i)
-      found_date if found_date < Date.today
-    rescue Date::Error
-      nil
     end
   end
 end
