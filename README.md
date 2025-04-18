@@ -10,6 +10,7 @@ Validate Tax Identification Numbers (TINs) for the following European countries:
 - Czechia 🇨🇿
 - Denmark 🇩🇰
 - Estonia 🇪🇪
+- Finland 🇫🇮
 - France 🇫🇷
 - Germany 🇩🇪
 - Greece 🇬🇷
@@ -80,6 +81,10 @@ TinValid::DenmarkTin.new(tin: "…", birth_date: Date.new(…)).valid?
 # Estonia
 # Optional birth_date
 TinValid::EstoniaTin.new(tin: "…", birth_date: Date.new(…)).valid?
+
+# Finland
+# Optional birth_date
+TinValid::FinlandTin.new(tin: "…", birth_date: Date.new(…)).valid?
 
 # France
 TinValid::FranceTin.new(tin: "…").valid?
