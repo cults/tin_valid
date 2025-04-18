@@ -1,5 +1,8 @@
 ## [Unreleased]
 
+Features:
+- Add France 🇫🇷
+
 Fixes:
 - Test against clearly invalid codes 00000… and 123456…
 
