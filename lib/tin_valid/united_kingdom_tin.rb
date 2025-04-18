@@ -1,7 +1,13 @@
 # frozen_string_literal: true
 
 module TinValid
-  class UnitedKingdomTin < Data.define(:tin)
+  class UnitedKingdomTin
+    def initialize(tin:)
+      @tin = tin
+    end
+
+    attr_reader :tin
+
     def valid?
       valid_v1? || valid_v2?
     end

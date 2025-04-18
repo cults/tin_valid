@@ -1,10 +1,15 @@
 # frozen_string_literal: true
 
 module TinValid
-  class BulgariaTin < Data.define(:tin, :birth_date)
+  class BulgariaTin
+    include TinValid::Helpers
+
     def initialize(tin:, birth_date: nil)
-      super
+      @tin = tin
+      @birth_date = birth_date
     end
+
+    attr_reader :tin, :birth_date
 
     def valid?
       match = MATCHER.match(tin)
@@ -37,9 +42,9 @@ module TinValid
       day = day.to_i
 
       if birth_date.nil?
-        past_date?("18#{year}", month - 20, day) ||
-          past_date?("19#{year}", month, day) ||
-          past_date?("20#{year}", month - 40, day)
+        date("18#{year}", month - 20, day) ||
+          date("19#{year}", month, day) ||
+          date("20#{year}", month - 40, day)
       elsif birth_year < 1900
         birth_date == date("18#{year}", month - 20, day)
       elsif birth_year < 2000
@@ -52,18 +57,6 @@ module TinValid
     # rubocop:enable Metrics/MethodLength
 
     def birth_year = birth_date.year
-
-    def past_date?(year, month, day)
-      found_date = date(year, month, day)
-      found_date && found_date < Date.today
-    end
-
-    def date(year, month, day)
-      found_date = Date.new(year.to_i, month.to_i, day.to_i)
-      found_date if found_date < Date.today
-    rescue Date::Error
-      nil
-    end
 
     def check
       weights = [2, 4, 8, 5, 10, 9, 7, 3, 6]

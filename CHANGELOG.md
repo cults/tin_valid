@@ -6,6 +6,7 @@ Features:
 
 Fixes:
 - Test against clearly invalid codes 00000… and 123456…
+- Check that all dates are in the past
 
 ## [1.0.0] - 2025-04-17
 

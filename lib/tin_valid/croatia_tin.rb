@@ -1,7 +1,13 @@
 # frozen_string_literal: true
 
 module TinValid
-  class CroatiaTin < Data.define(:tin)
+  class CroatiaTin
+    def initialize(tin:)
+      @tin = tin
+    end
+
+    attr_reader :tin
+
     def valid?
       return false unless /\A[0-9]{11}\z/.match?(tin)
 

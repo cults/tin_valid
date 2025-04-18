@@ -1,10 +1,13 @@
 # frozen_string_literal: true
 
 module TinValid
-  class CyprusTin < Data.define(:tin, :kind)
+  class CyprusTin
     def initialize(tin:, kind: nil)
-      super
+      @tin = tin
+      @kind = kind
     end
+
+    attr_reader :tin, :kind
 
     def valid?
       matcher.match?(tin) && check == tin[-1]

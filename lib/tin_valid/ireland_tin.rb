@@ -1,7 +1,13 @@
 # frozen_string_literal: true
 
 module TinValid
-  class IrelandTin < Data.define(:tin)
+  class IrelandTin
+    def initialize(tin:)
+      @tin = tin
+    end
+
+    attr_reader :tin
+
     def valid?
       /\A[0-9]{7}[A-W][A-IW]?\z/.match?(tin) &&
         tin.chars[7] == check

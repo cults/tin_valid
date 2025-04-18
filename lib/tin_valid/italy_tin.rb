@@ -3,6 +3,8 @@
 module TinValid
   # rubocop:disable Metrics/ClassLength
   class ItalyTin
+    include TinValid::Helpers
+
     def initialize(tin:, birth_date: nil)
       @tin = tin
       @birth_date = birth_date
@@ -58,13 +60,6 @@ module TinValid
 
     def replacement_to_i(string)
       string.chars.map { NUMERICAL_REPLACEMENTS.fetch(_1, _1) }.join.to_i
-    end
-
-    def date(year, month, day)
-      found_date = Date.new(year.to_i, month.to_i, day.to_i)
-      found_date if found_date < Date.today
-    rescue Date::Error
-      nil
     end
 
     MATCHER = %r{

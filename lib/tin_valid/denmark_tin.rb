@@ -1,10 +1,15 @@
 # frozen_string_literal: true
 
 module TinValid
-  class DenmarkTin < Data.define(:tin, :birth_date)
+  class DenmarkTin
+    include TinValid::Helpers
+
     def initialize(tin:, birth_date: nil)
-      super
+      @tin = tin
+      @birth_date = birth_date
     end
+
+    attr_reader :tin, :birth_date
 
     # rubocop:disable Metrics/AbcSize
     def valid?
@@ -40,13 +45,6 @@ module TinValid
 
     def birth_century = birth_date.strftime("%Y")[..1]
     def birth_year = birth_date.year
-
-    def date(year, month, day)
-      found_date = Date.new(year.to_i, month.to_i, day.to_i)
-      found_date if found_date < Date.today
-    rescue Date::Error
-      nil
-    end
 
     def checksum
       # 1. Multiply the values of each position by the corresponding weight:
