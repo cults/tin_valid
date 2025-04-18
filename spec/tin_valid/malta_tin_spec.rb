@@ -11,6 +11,8 @@ RSpec.describe TinValid::MaltaTin do
       "1234567",
       "1234567A9",
       "993456789",
+      "00000000",
+      "12345678",
       nil,
       "",
     ]

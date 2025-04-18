@@ -11,6 +11,8 @@ RSpec.describe TinValid::ItalyTin do
       ["DMLPRY77D15H501", nil],
       ["DMLPRY77D15H501F9", nil],
       ["DMLPRY77D15H501F", Date.new(1977, 4, 16)],
+      ["000000000", nil],
+      ["123456789", nil],
       [nil, nil],
       ["", nil],
     ]

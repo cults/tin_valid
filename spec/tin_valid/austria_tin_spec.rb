@@ -11,6 +11,8 @@ RSpec.describe TinValid::AustriaTin do
     invalid_values = [
       "9317365819",
       "93173658",
+      "000000000",
+      "123456789",
       nil,
       "",
     ]

@@ -13,6 +13,8 @@ RSpec.describe TinValid::LuxembourgTin do
       ["18931201057329", nil],
       ["189312010573", nil],
       ["1893120105732", Date.new(1893, 12, 2)],
+      ["0000000000000", nil],
+      ["1234567891012", nil],
       [nil, nil],
       ["", nil],
     ]

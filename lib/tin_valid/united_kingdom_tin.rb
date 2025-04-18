@@ -8,7 +8,11 @@ module TinValid
 
     private
 
-    def valid_v1? = /\A[0-9]{10}\z/.match?(tin)
+    def valid_v1?
+      return false if %w[1234567890 0000000000].include?(tin)
+
+      /\A[0-9]{10}\z/.match?(tin)
+    end
 
     def valid_v2?
       return false unless /\A[A-Z]{2}[0-9]{6}[A-D]?\z/.match?(tin)

@@ -25,6 +25,7 @@ module TinValid
 
     def valid_v1?
       return false unless MATCHER_V1.match?(tin)
+      return false if tin == "0000000000"
 
       tin[-1].to_i == check
     end
@@ -32,6 +33,7 @@ module TinValid
     def valid_v2?
       match = MATCHER_V2.match(tin)
       return false unless match
+      return false if tin == "00000000000"
       return true unless birth_date
 
       tin_date = date(

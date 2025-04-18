@@ -33,6 +33,7 @@ module TinValid
     def valid_v1?
       match = MATCHER_V1.match(tin)
       return false unless match
+      return false if tin == "000000000"
       return true if birth_date.nil?
       return false if year_of_birth >= 1954
 
@@ -46,11 +47,10 @@ module TinValid
       birth_date == date(year, month, match[:day])
     end
 
-    # rubocop:disable Metrics/AbcSize
-    # rubocop:disable Metrics/MethodLength
     def valid_v2?
       match = MATCHER_V2.match(tin)
       return false unless match
+      return false if tin == "0000000000"
       return true if birth_date.nil?
       return false if year_of_birth < 1954
 
@@ -59,25 +59,27 @@ module TinValid
       # 54 - 99 for people born between 1954 and 1999.
       year = "#{birth_century}#{match[:year]}"
 
-      # Month (in the range 1...12 only for men) or month + 20 (in the range
-      # 21…32 only for men) or month + 50 (in the range 51...62 only for women)
-      # or month + 70 (in the range 71…82 only for women).
-      month = match[:month].to_i
-      if month > 70
-        month -= 70
-      elsif month > 50
-        month -= 50
-      elsif month > 20
-        month -= 20
-      end
-
-      birth_date == date(year, month, match[:day])
+      birth_date == date(year, month_integer(match[:month]), match[:day])
     end
-    # rubocop:enable Metrics/AbcSize
-    # rubocop:enable Metrics/MethodLength
 
     def year_of_birth = birth_date&.year
     def birth_century = birth_date.strftime("%Y")[..1]
+
+    # Month (in the range 1...12 only for men) or month + 20 (in the range
+    # 21…32 only for men) or month + 50 (in the range 51...62 only for women)
+    # or month + 70 (in the range 71…82 only for women).
+    def month_integer(number)
+      number = number.to_i
+      if number > 70
+        number - 70
+      elsif number > 50
+        number - 50
+      elsif number > 20
+        number - 20
+      else
+        number
+      end
+    end
 
     def date(year, month, day)
       Date.new(year.to_i, month.to_i, day.to_i)

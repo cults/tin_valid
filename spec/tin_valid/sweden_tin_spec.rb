@@ -12,6 +12,8 @@ RSpec.describe TinValid::SwedenTin do
       ["640883-3239", nil],
       ["640823-3239", nil],
       ["640823-3234", Date.new(1964, 8, 29)],
+      ["000000-0000", nil],
+      ["123456-7890", nil],
       [nil, nil],
       ["", nil],
     ]

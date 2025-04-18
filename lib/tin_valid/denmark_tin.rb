@@ -6,9 +6,11 @@ module TinValid
       super
     end
 
+    # rubocop:disable Metrics/AbcSize
     def valid?
       match = MATCHER.match(tin)
       return false unless match
+      return false if tin == "0000000000"
 
       if birth_date
         year = "#{birth_century}#{match[:year]}"
@@ -19,6 +21,7 @@ module TinValid
 
       match[:check].to_i == checksum
     end
+    # rubocop:enable Metrics/AbcSize
 
     private
 

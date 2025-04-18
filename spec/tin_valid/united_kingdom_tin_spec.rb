@@ -3,7 +3,7 @@
 RSpec.describe TinValid::UnitedKingdomTin do
   describe "#valid?" do
     valid_values = %w[
-      1234567890
+      9234567890
       AA123456A
       AA123456
     ]
@@ -17,6 +17,8 @@ RSpec.describe TinValid::UnitedKingdomTin do
       "NK123456A",
       "TN123456A",
       "AA123456E",
+      "0000000000",
+      "1234567890",
       nil,
       "",
     ]
