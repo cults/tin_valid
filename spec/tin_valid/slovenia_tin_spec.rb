@@ -11,6 +11,8 @@ RSpec.describe TinValid::SloveniaTin do
       "1501255",
       "15012559",
       "05012557",
+      "00000000",
+      "12345678",
       nil,
       "",
     ]

@@ -10,6 +10,7 @@ module TinValid
 
     def valid?
       return false unless MATCHER.match?(normalized)
+      return false if %w[000000000 123456789].include?(normalized)
 
       normalized[-1] == check
     end

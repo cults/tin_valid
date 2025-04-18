@@ -12,7 +12,9 @@ module TinValid
       # 1. 13 characters
       # 2. Only digits
       # 3. C5 is a 0
-      /\A[0-9]{4}0[0-9]{8}\z/.match?(tin)
+      return false unless /\A[0-9]{4}0[0-9]{8}\z/.match?(tin)
+
+      tin.to_i != 0
     end
 
     # rubocop:disable Metrics/AbcSize

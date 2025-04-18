@@ -19,6 +19,8 @@ RSpec.describe TinValid::SpainTin do
       "X1234567",
       "Z1234567B",
       "M2812345Z",
+      "00000000",
+      "12345678",
       nil,
       "",
     ]

@@ -4,6 +4,7 @@ module TinValid
   class NetherlandsTin < Data.define(:tin)
     def valid?
       return false unless /\A[0-9]{9}\z/.match?(tin)
+      return false if tin == "000000000"
 
       tin[-1].to_i == check
     end

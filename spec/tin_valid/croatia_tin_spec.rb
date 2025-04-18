@@ -7,8 +7,11 @@ RSpec.describe TinValid::CroatiaTin do
     ]
 
     invalid_values = [
+      "945774031941",
       "94577403195",
       "94577",
+      "00000000000",
+      "12345678901",
       nil,
       "",
     ]

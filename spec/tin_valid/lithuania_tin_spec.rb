@@ -11,6 +11,8 @@ RSpec.describe TinValid::LithuaniaTin do
       ["101010100059", nil],
       ["1010101000", nil],
       ["10101010005", Date.new(2001, 1, 2)],
+      ["00000000000", nil],
+      ["12345678910", nil],
       [nil, nil],
       ["", nil],
     ]

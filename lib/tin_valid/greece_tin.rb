@@ -3,7 +3,9 @@
 module TinValid
   class GreeceTin < Data.define(:tin)
     def valid?
-      /\A[0-9]{9}\z/.match?(tin)
+      return false unless /\A[0-9]{9}\z/.match?(tin)
+
+      tin != "000000000" && tin != "123456789"
     end
   end
 end

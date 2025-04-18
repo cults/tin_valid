@@ -10,6 +10,8 @@ RSpec.describe TinValid::DenmarkTin do
     invalid_values = [
       ["0101111119", nil],
       ["0101111113", Date.new(1911, 1, 9)],
+      ["0000000000", nil],
+      ["1234567890", nil],
       [nil, nil],
       ["", nil],
     ]

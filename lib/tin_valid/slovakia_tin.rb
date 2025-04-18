@@ -6,7 +6,11 @@ module TinValid
       super
     end
 
-    def valid? = valid_v2? || valid_v1?
+    def valid?
+      return false if %w[0000000000 000000000 1234567890].include?(tin)
+
+      valid_v2? || valid_v1?
+    end
 
     def normalized = tin.tr("/", "")
 

@@ -10,6 +10,8 @@ RSpec.describe TinValid::NetherlandsTin do
       "1745594349",
       "17455943",
       "174559439",
+      "000000000",
+      "123456789",
       nil,
       "",
     ]

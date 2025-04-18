@@ -12,6 +12,8 @@ RSpec.describe TinValid::LatviaTin do
       ["010110123459", nil],
       ["0101101234", nil],
       ["01011012345", Date.new(1910, 1, 9)],
+      ["00000000000", nil],
+      ["12345678910", nil],
       [nil, nil],
       ["", nil],
     ]
