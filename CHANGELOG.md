@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+## [1.1.1] - 2025-04-28
+
 Fixes:
 - Fix birth date check for Italy when year is between 1900..1909 or 2000..2009
 
