@@ -4,6 +4,7 @@ RSpec.describe TinValid::FranceTin do
   describe "#valid?" do
     valid_values = %w[
       3023217600053
+      302321760
     ]
 
     invalid_values = [
@@ -12,6 +13,8 @@ RSpec.describe TinValid::FranceTin do
       "302321760005",
       "0000000000000",
       "1234567890123",
+      "000000000",
+      "123456789",
       nil,
       "",
     ]
