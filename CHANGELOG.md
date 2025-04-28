@@ -1,5 +1,8 @@
 ## [Unreleased]
 
+Fixes:
+- Accept SIREN for France
+
 ## [1.1.1] - 2025-04-28
 
 Fixes:

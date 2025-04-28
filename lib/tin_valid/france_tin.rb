@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# https://www.economie.gouv.fr/cedef/fiches-pratiques/quest-ce-que-le-nif
 module TinValid
   class FranceTin
     def initialize(tin:)
@@ -8,14 +9,23 @@ module TinValid
 
     attr_reader :tin
 
-    def valid?
+    def valid? = valid_v1? || valid_siren?
+
+    private
+
+    def valid_v1?
       return false unless /\A[0-3][0-9]{12}\z/.match?(tin)
       return false if tin == "0000000000000"
 
       tin[-3..].to_i == check
     end
 
-    private
+    # https://annuaire-entreprises.data.gouv.fr/definitions/numero-siren
+    def valid_siren?
+      return false if tin == "123456789"
+
+      /\A[1-9][0-9]{8}\z/.match?(tin)
+    end
 
     def check
       # 1. Concatenate C1, C2, C3, C4, C5, C6, C7, C8, C9, C10;
