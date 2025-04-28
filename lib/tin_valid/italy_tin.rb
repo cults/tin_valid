@@ -24,7 +24,7 @@ module TinValid
 
     def valid_date?(match)
       # C7,C8: Two last digits of a year.
-      year = replacement_to_i(match[:year])
+      year = replacement_to_i(match[:year]).to_s.rjust(2, "0")
 
       # C9: A letter representing a month;
       month = MONTH_LETTERS.fetch(match[:month])

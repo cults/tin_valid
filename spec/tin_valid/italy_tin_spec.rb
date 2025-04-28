@@ -5,6 +5,7 @@ RSpec.describe TinValid::ItalyTin do
     valid_values = [
       ["DMLPRY77D15H501F", nil],
       ["DMLPRY77D15H501F", Date.new(1977, 4, 15)],
+      ["DMLPRY07D15H501P", Date.new(1907, 4, 15)],
     ]
 
     invalid_values = [
