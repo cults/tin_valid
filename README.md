@@ -91,6 +91,8 @@ TinValid::FinlandTin.new(tin: "…", birth_date: Date.new(…)).valid?
 
 # France
 TinValid::FranceTin.new(tin: "…").valid?
+TinValid::FranceTin.new(tin: "…").siren?
+TinValid::FranceTin.new(tin: "…").siret?
 
 # Germany
 TinValid::GermanyTin.new(tin: "…").valid?

@@ -1,7 +1,10 @@
 ## [Unreleased]
 
+Features:
+- Add `#siren?` and `#siret?` on `TinValid::FranceTin`
+
 Fixes:
-- Accept SIREN for France
+- Accept SIREN and SIRET for France
 
 ## [1.1.1] - 2025-04-28
 
