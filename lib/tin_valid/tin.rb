@@ -2,13 +2,14 @@
 
 module TinValid
   class Tin
-    def initialize(country_code:, tin:, birth_date: nil)
+    def initialize(country_code:, tin:, birth_date: nil, kind: nil)
       @country_code = country_code
       @tin = tin
       @birth_date = birth_date
+      @kind = kind
     end
 
-    attr_reader :country_code, :tin, :birth_date
+    attr_reader :country_code, :tin, :birth_date, :kind
 
     # rubocop:disable Metrics/AbcSize
     # rubocop:disable Metrics/CyclomaticComplexity
@@ -27,6 +28,7 @@ module TinValid
       in "es" then SpainTin.new(tin:).valid?
       in "fi" then FinlandTin.new(tin:).valid?
       in "fr" then FranceTin.new(tin:).valid?
+      in "gb" then UnitedKingdomTin.new(tin:).valid?
       in "gr" then GreeceTin.new(tin:).valid?
       in "hr" then CroatiaTin.new(tin:).valid?
       in "hu" then HungaryTin.new(tin:).valid?
