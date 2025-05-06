@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+## [1.1.2] - 2025-05-06
+
 Fixes:
 - Fix Luxembourg check
 - Accept SIREN for France
