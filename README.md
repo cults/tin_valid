@@ -55,10 +55,11 @@ gem install tin_valid
 ## Usage
 
 ```rb
-# Check a tin by providing the country code:
-# - country_code must be a lowercase string (e.g. "fr", "be", …)
-# - birth_date is optional
-TinValid::Tin.new(country_code: "fr", tin: "…", birth_date: Date.new(…)).valid?
+# Check a tin by providing the country code as a lowercase string.
+# Also accepts the following optional arguments:
+# - birth_date as a Date
+# - kind as one of the following strings: "individual", "company"
+TinValid::Tin.new(country_code: "fr", tin: "…").valid?
 
 # Austria
 TinValid::AustriaTin.new(tin: "…").valid?
