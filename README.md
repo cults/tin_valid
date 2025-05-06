@@ -55,15 +55,20 @@ gem install tin_valid
 ## Usage
 
 ```rb
+# Check a tin by providing the country code:
+# - country_code must be a lowercase string (e.g. "fr", "be", …)
+# - birth_date is optional
+TinValid::Tin.new(country_code: "fr", tin: "…", birth_date: Date.new(…)).valid?
+
 # Austria
-TinValid::AustriaTin.new(tin: "…").valid? # => true
+TinValid::AustriaTin.new(tin: "…").valid?
 
 # Belgium
-# Optional birth_date
+# - birth_date is optional
 TinValid::BelgiumTin.new(tin: "…", birth_date: Date.new(…)).valid?
 
 # Bulgaria
-# Optional birth_date
+# - birth_date is optional
 TinValid::BulgariaTin.new(tin: "…", birth_date: Date.new(…)).valid?
 
 # Croatia
@@ -74,19 +79,19 @@ TinValid::CroatiaTin.new(tin: "…").valid?
 TinValid::CyprusTin.new(tin: "…", kind: "individual").valid?
 
 # Czechia
-# Optional birth_date
+# - birth_date is optional
 TinValid::CzechiaTin.new(tin: "…", birth_date: Date.new(…)).valid?
 
 # Denmark
-# Optional birth_date
+# - birth_date is optional
 TinValid::DenmarkTin.new(tin: "…", birth_date: Date.new(…)).valid?
 
 # Estonia
-# Optional birth_date
+# - birth_date is optional
 TinValid::EstoniaTin.new(tin: "…", birth_date: Date.new(…)).valid?
 
 # Finland
-# Optional birth_date
+# - birth_date is optional
 TinValid::FinlandTin.new(tin: "…", birth_date: Date.new(…)).valid?
 
 # France
@@ -105,19 +110,19 @@ TinValid::HungaryTin.new(tin: "…").valid?
 TinValid::IrelandTin.new(tin: "…").valid?
 
 # Italy
-# Optional birth_date
+# - birth_date is optional
 TinValid::ItalyTin.new(tin: "…", birth_date: Date.new(…)).valid?
 
 # Latvia
-# Optional birth_date
+# - birth_date is optional
 TinValid::LatviaTin.new(tin: "…", birth_date: Date.new(…)).valid?
 
 # Lithuania
-# Optional birth_date
+# - birth_date is optional
 TinValid::LithuaniaTin.new(tin: "…", birth_date: Date.new(…)).valid?
 
 # Luxembourg
-# Optional birth_date
+# - birth_date is optional
 TinValid::LuxembourgTin.new(tin: "…", birth_date: Date.new(…)).valid?
 
 # Malta
@@ -127,18 +132,18 @@ TinValid::MaltaTin.new(tin: "…").valid?
 TinValid::NetherlandsTin.new(tin: "…").valid?
 
 # Poland
-# Optional birth_date
+# - birth_date is optional
 TinValid::PolandTin.new(tin: "…", birth_date: Date.new(…)).valid?
 
 # Portugal
 TinValid::PortugalTin.new(tin: "…").valid?
 
 # Romania
-# Optional birth_date
+# - birth_date is optional
 TinValid::RomaniaTin.new(tin: "…", birth_date: Date.new(…)).valid?
 
 # Slovakia
-# Optional birth_date
+# - birth_date is optional
 TinValid::SlovakiaTin.new(tin: "…", birth_date: Date.new(…)).valid?
 
 # Slovenia
@@ -148,7 +153,7 @@ TinValid::SloveniaTin.new(tin: "…").valid?
 TinValid::SpainTin.new(tin: "…").valid?
 
 # Sweden
-# Optional birth_date
+# - birth_date is optional
 TinValid::SwedenTin.new(tin: "…", birth_date: Date.new(…)).valid?
 
 # United Kingdom
