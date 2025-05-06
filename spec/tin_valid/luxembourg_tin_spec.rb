@@ -8,6 +8,8 @@ RSpec.describe TinValid::LuxembourgTin do
     ]
 
     invalid_values = [
+      [nil, nil],
+      ["", nil],
       ["1893120105792", nil],
       ["1893120105739", nil],
       ["18931201057329", nil],
@@ -15,8 +17,7 @@ RSpec.describe TinValid::LuxembourgTin do
       ["1893120105732", Date.new(1893, 12, 2)],
       ["0000000000000", nil],
       ["1234567891012", nil],
-      [nil, nil],
-      ["", nil],
+      ["2011032753396", nil],
     ]
 
     valid_values.each do |(tin, birth_date)|
