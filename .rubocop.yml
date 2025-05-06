@@ -12,6 +12,7 @@ Layout/LineLength:
   Max: 80
   Exclude:
     - bin/rspec
+    - bin/rake
 
 Layout/MultilineMethodCallIndentation:
   # On multiline calls, indent starting from the receiver.
