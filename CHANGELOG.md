@@ -2,6 +2,7 @@
 
 Fixes:
 - Fix Luxembourg check
+- Accept SIREN for France
 
 ## [1.1.1] - 2025-04-28
 

@@ -31,8 +31,11 @@ Validate Tax Identification Numbers (TINs) for the following European countries:
 - Sweden 🇸🇪
 - United Kingdom 🇬🇧
 
-See also the [descriptions of the structure provided by the European
-Union](https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-taxation/taxpayer-identification-number-tin_en).
+See also the
+[TIN specifications](https://ec.europa.eu/taxation_customs/tin/#/check-tin)
+and the
+[descriptions of the structure](https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-taxation/taxpayer-identification-number-tin_en)
+provided by the European Union.
 
 ## Installation
 
