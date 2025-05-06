@@ -1,5 +1,8 @@
 ## [Unreleased]
 
+Fixes:
+- Fix Luxembourg check
+
 ## [1.1.1] - 2025-04-28
 
 Fixes:
