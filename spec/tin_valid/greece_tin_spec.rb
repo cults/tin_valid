@@ -8,6 +8,7 @@ RSpec.describe TinValid::GreeceTin do
 
     invalid_values = [
       "99999",
+      "1729867336",
       "999999999999",
       "000000000",
       "123456789",

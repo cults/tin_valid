@@ -3,6 +3,7 @@
 require "date"
 require_relative "tin_valid/version"
 require_relative "tin_valid/helpers"
+require_relative "tin_valid/tin"
 require_relative "tin_valid/austria_tin"
 require_relative "tin_valid/belgium_tin"
 require_relative "tin_valid/bulgaria_tin"

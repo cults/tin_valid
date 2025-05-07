@@ -4,7 +4,7 @@ RSpec.describe TinValid::RomaniaTin do
   describe "#valid?" do
     valid_values = [
       ["8001011234567", nil],
-      ["8001011234567", nil],
+      ["8001011234567", Date.new(2000, 10, 11)],
       ["900012345678", nil],
     ]
 
@@ -16,6 +16,7 @@ RSpec.describe TinValid::RomaniaTin do
       ["000000000000", nil],
       ["1234567890123", nil],
       ["123456789012", nil],
+      ["8001011234567", Date.new(2000, 10, 12)],
       [nil, nil],
       ["", nil],
     ]
