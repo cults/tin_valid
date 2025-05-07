@@ -30,19 +30,19 @@ RSpec.describe TinValid::Tin do
       ["nl", "174559434",        nil,                    nil],
       ["pl", "02070803628",      Date.new(1902, 7, 8),   nil],
       ["pt", "299999998",        nil,                    nil],
-      ["ro", "8001011234567",    nil,                    nil],
+      ["ro", "8001011234567",    Date.new(2000, 10, 11), nil],
       ["se", "640823-3234",      Date.new(1964, 8, 23),  nil],
       ["si", "15012557",         nil,                    nil],
       ["sk", "7711167420",       Date.new(1977, 11, 16), nil],
     ]
 
     invalid_values = [
-      # country
-      # |    tin         birth_date kind
-      # |    |           |          |
-      ["at", "93173658", nil,       nil],
-      ["at", nil,        nil,       nil],
-      ["at", "",         nil,       nil],
+      # country     birth_date
+      # |    tin    |    kind
+      # |    |      |    |
+      ["at", "123", nil, nil],
+      ["at", nil,   nil, nil],
+      ["at", "",    nil, nil],
     ]
 
     valid_values.each do |(country_code, tin, birth_date)|
