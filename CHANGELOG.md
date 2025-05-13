@@ -1,6 +1,7 @@
 ## [Unreleased]
 
 Features:
+- Add generic `TinValid::Tin.new(country_code: …, tin: …).valid?`
 - Accept SIRET for France
 - Add `#siren?` and `#siret?` on `TinValid::FranceTin`
 
