@@ -164,6 +164,8 @@ TinValid::FinlandTin.new(
 
 ```rb
 TinValid::FranceTin.new(tin: "3023217600053").valid?
+TinValid::FranceTin.new(tin: "732829320").siren?
+TinValid::FranceTin.new(tin: "73282932000074").siret?
 ```
 
 ### Germany (de)
