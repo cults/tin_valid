@@ -1,5 +1,9 @@
 ## [Unreleased]
 
+Features:
+- `TinValid::Tin.new` accept symbols or uppercase country codes.
+- `kind` argument accept symbols.
+
 ## [1.2.0] - 2025-05-14
 
 Features:

@@ -3,7 +3,7 @@
 module TinValid
   class Tin
     def initialize(country_code:, tin:, birth_date: nil, kind: nil)
-      @country_code = country_code
+      @country_code = country_code.to_s.downcase
       @tin = tin
       @birth_date = birth_date
       @kind = kind
