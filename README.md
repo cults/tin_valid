@@ -54,7 +54,7 @@ gem install tin_valid
 
 ## Usage
 
-Check a TIN by providing the country code as a lowercase string.
+Check a TIN by providing the country code.
 
 Also accepts the following optional arguments:
 

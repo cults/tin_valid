@@ -4,7 +4,7 @@ module TinValid
   class CyprusTin
     def initialize(tin:, kind: nil)
       @tin = tin
-      @kind = kind
+      @kind = kind.to_s
     end
 
     attr_reader :tin, :kind
