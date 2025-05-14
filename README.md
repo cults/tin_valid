@@ -110,10 +110,7 @@ TinValid::CroatiaTin.new(
 `kind` is optional and can be `"individual"` or `"company"`
 
 ```rb
-TinValid::CyprusTin.new(
-  tin: "00123123T",
-  kind: "individual",
-).valid?
+TinValid::CyprusTin.new(tin: "00123123T", kind: "individual").valid?
 ```
 
 ### Czechia (cz)
@@ -164,7 +161,13 @@ TinValid::FinlandTin.new(
 
 ```rb
 TinValid::FranceTin.new(tin: "3023217600053").valid?
+```
+
+```rb
 TinValid::FranceTin.new(tin: "732829320").siren?
+```
+
+```rb
 TinValid::FranceTin.new(tin: "73282932000074").siret?
 ```
 
@@ -210,7 +213,7 @@ TinValid::ItalyTin.new(
 ```rb
 TinValid::LatviaTin.new(
   tin: "01011012345",
-  Date.new(1910, 1, 1),
+  birth_date: Date.new(1910, 1, 1),
 ).valid?
 ```
 
@@ -283,17 +286,14 @@ TinValid::RomaniaTin.new(
 ```rb
 TinValid::SlovakiaTin.new(
   tin: "7711167420",
-  Date.new(1977, 11, 16),
+  birth_date: Date.new(1977, 11, 16),
 ).valid?
 ```
 
 ### Slovenia (si)
 
 ```rb
-TinValid::SloveniaTin.new(
-  tin: "7711167420",
-  Date.new(1977, 11, 16),
-).valid?
+TinValid::SloveniaTin.new(tin: "15012557").valid?
 ```
 
 ### Spain (es)

@@ -1,8 +1,13 @@
 ## [Unreleased]
 
+## [1.2.0] - 2025-05-14
+
 Features:
-- Accept SIRET for France
+- Add generic `TinValid::Tin.new(country_code: "…", tin: "…").valid?`
 - Add `#siren?` and `#siret?` on `TinValid::FranceTin`
+
+Fixes:
+- Accept SIRET for France
 
 ## [1.1.2] - 2025-05-06
 

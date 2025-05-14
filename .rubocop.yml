@@ -34,6 +34,13 @@ Metrics/BlockLength:
   Exclude:
     - spec/**/*
 
+# Security
+
+Security/Eval:
+  # Allow the use of `eval` in specs.
+  Exclude:
+    - spec/**/*
+
 # Style
 
 Style/Documentation:
