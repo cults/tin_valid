@@ -54,107 +54,269 @@ gem install tin_valid
 
 ## Usage
 
+Check a TIN by providing the country code as a lowercase string.
+
+Also accepts the following optional arguments:
+
+- `birth_date`: Date
+- `kind`: `"individual"` or `"company"`
+
 ```rb
-# Austria
-TinValid::AustriaTin.new(tin: "…").valid? # => true
+TinValid::Tin.new(country_code: "fr", tin: "3023217600053").valid?
+```
 
-# Belgium
-# Optional birth_date
-TinValid::BelgiumTin.new(tin: "…", birth_date: Date.new(…)).valid?
+You can also call countries individually:
 
-# Bulgaria
-# Optional birth_date
-TinValid::BulgariaTin.new(tin: "…", birth_date: Date.new(…)).valid?
+### Austria (at)
 
-# Croatia
-TinValid::CroatiaTin.new(tin: "…").valid?
+```rb
+TinValid::AustriaTin.new(
+  tin: "931736581",
+).valid?
+```
 
-# Cyprus
-# Optional kind ("individual" or "company")
-TinValid::CyprusTin.new(tin: "…", kind: "individual").valid?
+### Belgium (be)
 
-# Czechia
-# Optional birth_date
-TinValid::CzechiaTin.new(tin: "…", birth_date: Date.new(…)).valid?
+`birth_date` is optional
 
-# Denmark
-# Optional birth_date
-TinValid::DenmarkTin.new(tin: "…", birth_date: Date.new(…)).valid?
+```rb
+TinValid::BelgiumTin.new(
+  tin: "00012511119",
+  birth_date: Date.new(1900, 1, 25),
+).valid?
+```
 
-# Estonia
-# Optional birth_date
-TinValid::EstoniaTin.new(tin: "…", birth_date: Date.new(…)).valid?
+### Bulgaria (bg)
 
-# Finland
-# Optional birth_date
-TinValid::FinlandTin.new(tin: "…", birth_date: Date.new(…)).valid?
+`birth_date` is optional
 
-# France
-TinValid::FranceTin.new(tin: "…").valid?
-TinValid::FranceTin.new(tin: "…").siren?
-TinValid::FranceTin.new(tin: "…").siret?
+```rb
+TinValid::BulgariaTin.new(
+  tin: "7501010010",
+  birth_date: Date.new(1975, 1, 1),
+).valid?
+```
 
-# Germany
-TinValid::GermanyTin.new(tin: "…").valid?
+### Croatia (hr)
 
-# Greece
-TinValid::GreeceTin.new(tin: "…").valid?
+```rb
+TinValid::CroatiaTin.new(
+  tin: "94577403194",
+).valid?
+```
 
-# Hungary
-TinValid::HungaryTin.new(tin: "…").valid?
+### Cyprus (cy)
 
-# Ireland
-TinValid::IrelandTin.new(tin: "…").valid?
+`kind` is optional and can be `"individual"` or `"company"`
 
-# Italy
-# Optional birth_date
-TinValid::ItalyTin.new(tin: "…", birth_date: Date.new(…)).valid?
+```rb
+TinValid::CyprusTin.new(
+  tin: "00123123T",
+  kind: "individual",
+).valid?
+```
 
-# Latvia
-# Optional birth_date
-TinValid::LatviaTin.new(tin: "…", birth_date: Date.new(…)).valid?
+### Czechia (cz)
 
-# Lithuania
-# Optional birth_date
-TinValid::LithuaniaTin.new(tin: "…", birth_date: Date.new(…)).valid?
+`birth_date` is optional
 
-# Luxembourg
-# Optional birth_date
-TinValid::LuxembourgTin.new(tin: "…", birth_date: Date.new(…)).valid?
+```rb
+TinValid::CzechiaTin.new(
+  tin: "420901999",
+  birth_date: Date.new(1942, 9, 1),
+).valid?
+```
 
-# Malta
-TinValid::MaltaTin.new(tin: "…").valid?
+### Denmark (dk)
 
-# Netherlands
-TinValid::NetherlandsTin.new(tin: "…").valid?
+`birth_date` is optional
 
-# Poland
-# Optional birth_date
-TinValid::PolandTin.new(tin: "…", birth_date: Date.new(…)).valid?
+```rb
+TinValid::DenmarkTin.new(
+  tin: "0101111113",
+  birth_date: Date.new(1911, 1, 1),
+).valid?
+```
 
-# Portugal
-TinValid::PortugalTin.new(tin: "…").valid?
+### Estonia (ee)
 
-# Romania
-# Optional birth_date
-TinValid::RomaniaTin.new(tin: "…", birth_date: Date.new(…)).valid?
+`birth_date` is optional
 
-# Slovakia
-# Optional birth_date
-TinValid::SlovakiaTin.new(tin: "…", birth_date: Date.new(…)).valid?
+```rb
+TinValid::EstoniaTin.new(
+  tin: "37102250382",
+  birth_date: Date.new(1971, 2, 25),
+).valid?
+```
 
-# Slovenia
-TinValid::SloveniaTin.new(tin: "…").valid?
+### Finland (fi)
 
-# Spain
-TinValid::SpainTin.new(tin: "…").valid?
+`birth_date` is optional
 
-# Sweden
-# Optional birth_date
-TinValid::SwedenTin.new(tin: "…", birth_date: Date.new(…)).valid?
+```rb
+TinValid::FinlandTin.new(
+  tin: "131052-308T",
+  birth_date: Date.new(1952, 10, 13),
+).valid?
+```
 
-# United Kingdom
-TinValid::UnitedKingdomTin.new(tin: "…").valid?
+### France (fr)
+
+```rb
+TinValid::FranceTin.new(tin: "3023217600053").valid?
+TinValid::FranceTin.new(tin: "732829320").siren?
+TinValid::FranceTin.new(tin: "73282932000074").siret?
+```
+
+### Germany (de)
+
+```rb
+TinValid::GermanyTin.new(tin: "5133081508159").valid?
+```
+
+### Greece (gr)
+
+```rb
+TinValid::GreeceTin.new(tin: "999999999").valid?
+```
+
+### Hungary (hu)
+
+```rb
+TinValid::HungaryTin.new(tin: "8071592153").valid?
+```
+
+### Ireland (ie)
+
+```rb
+TinValid::IrelandTin.new(tin: "1234567T").valid?
+```
+
+### Italy (it)
+
+`birth_date` is optional
+
+```rb
+TinValid::ItalyTin.new(
+  tin: "DMLPRY77D15H501F",
+  birth_date: Date.new(1977, 4, 15),
+).valid?
+```
+
+### Latvia (lv)
+
+`birth_date` is optional
+
+```rb
+TinValid::LatviaTin.new(
+  tin: "01011012345",
+  Date.new(1910, 1, 1),
+).valid?
+```
+
+### Lithuania (lt)
+
+`birth_date` is optional
+
+```rb
+TinValid::LithuaniaTin.new(
+  tin: "10101010005",
+  birth_date: Date.new(2001, 1, 1),
+).valid?
+```
+
+### Luxembourg (lu)
+
+`birth_date` is optional
+
+```rb
+TinValid::LuxembourgTin.new(
+  tin: "1893120105732",
+  birth_date: Date.new(1893, 12, 1),
+).valid?
+```
+
+### Malta (mt)
+
+```rb
+TinValid::MaltaTin.new(tin: "1234567A").valid?
+```
+
+### Netherlands (nl)
+
+```rb
+TinValid::NetherlandsTin.new(tin: "174559434").valid?
+```
+
+### Poland (pl)
+
+`birth_date` is optional
+
+```rb
+TinValid::PolandTin.new(
+  tin: "02070803628",
+  birth_date: Date.new(1902, 7, 8),
+).valid?
+```
+
+### Portugal (pt)
+
+```rb
+TinValid::PortugalTin.new(tin: "299999998").valid?
+```
+
+### Romania (ro)
+
+`birth_date` is optional
+
+```rb
+TinValid::RomaniaTin.new(
+  tin: "8001011234567",
+  birth_date: Date.new(2000, 10, 11),
+).valid?
+```
+
+### Slovakia (sk)
+
+`birth_date` is optional
+
+```rb
+TinValid::SlovakiaTin.new(
+  tin: "7711167420",
+  Date.new(1977, 11, 16),
+).valid?
+```
+
+### Slovenia (si)
+
+```rb
+TinValid::SloveniaTin.new(
+  tin: "7711167420",
+  Date.new(1977, 11, 16),
+).valid?
+```
+
+### Spain (es)
+
+```rb
+TinValid::SpainTin.new(tin: "54237A").valid?
+```
+
+### Sweden (se)
+
+`birth_date` is optional
+
+```rb
+TinValid::SwedenTin.new(
+  tin: "640823-3234",
+  birth_date: Date.new(1964, 8, 23),
+).valid?
+```
+
+### United Kingdom (gb)
+
+```rb
+TinValid::UnitedKingdomTin.new(tin: "9234567890").valid?
 ```
 
 ## Development
