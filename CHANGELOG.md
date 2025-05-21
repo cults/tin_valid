@@ -4,6 +4,9 @@ Features:
 - `TinValid::Tin.new` accept symbols or uppercase country codes.
 - `kind` argument accept symbols.
 
+Fixes:
+- Accept `/` for Czechia 🇨🇿
+
 ## [1.2.0] - 2025-05-14
 
 Features:
@@ -11,18 +14,19 @@ Features:
 - Add `#siren?` and `#siret?` on `TinValid::FranceTin`
 
 Fixes:
-- Accept SIRET for France
+- Accept SIRET for France 🇫🇷
 
 ## [1.1.2] - 2025-05-06
 
 Fixes:
-- Fix Luxembourg check
-- Accept SIREN for France
+- Fix Luxembourg check 🇱🇺
+- Accept SIREN for France 🇫🇷
 
 ## [1.1.1] - 2025-04-28
 
 Fixes:
-- Fix birth date check for Italy when year is between 1900..1909 or 2000..2009
+- Fix birth date check for Italy when year is between 1900..1909 or between
+  2000..2009 🇮🇹
 
 ## [1.1.0] - 2025-04-18
 
