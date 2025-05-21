@@ -119,7 +119,7 @@ TinValid::CyprusTin.new(tin: "00123123T", kind: "individual").valid?
 
 ```rb
 TinValid::CzechiaTin.new(
-  tin: "420901999",
+  tin: "420901/999",
   birth_date: Date.new(1942, 9, 1),
 ).valid?
 ```
