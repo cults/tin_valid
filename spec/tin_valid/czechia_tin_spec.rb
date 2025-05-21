@@ -4,8 +4,11 @@ RSpec.describe TinValid::CzechiaTin do
   describe "#valid?" do
     valid_values = [
       ["420901999", nil],
+      ["420901/999", nil],
       ["0009019999", nil],
+      ["000901/9999", nil],
       ["420901999", Date.new(1942, 9, 1)],
+      ["420901/999", Date.new(1942, 9, 1)],
     ]
 
     invalid_values = [

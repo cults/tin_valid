@@ -67,7 +67,7 @@ TinValid::Tin.new(country_code: "fr", tin: "3023217600053").valid?
 
 You can also call countries individually:
 
-### Austria (at)
+### Austria 🇦🇹 (at)
 
 ```rb
 TinValid::AustriaTin.new(
@@ -75,7 +75,7 @@ TinValid::AustriaTin.new(
 ).valid?
 ```
 
-### Belgium (be)
+### Belgium 🇧🇪 (be)
 
 `birth_date` is optional
 
@@ -86,7 +86,7 @@ TinValid::BelgiumTin.new(
 ).valid?
 ```
 
-### Bulgaria (bg)
+### Bulgaria 🇧🇬 (bg)
 
 `birth_date` is optional
 
@@ -97,7 +97,7 @@ TinValid::BulgariaTin.new(
 ).valid?
 ```
 
-### Croatia (hr)
+### Croatia 🇭🇷 (hr)
 
 ```rb
 TinValid::CroatiaTin.new(
@@ -105,7 +105,7 @@ TinValid::CroatiaTin.new(
 ).valid?
 ```
 
-### Cyprus (cy)
+### Cyprus 🇨🇾 (cy)
 
 `kind` is optional and can be `"individual"` or `"company"`
 
@@ -113,18 +113,18 @@ TinValid::CroatiaTin.new(
 TinValid::CyprusTin.new(tin: "00123123T", kind: "individual").valid?
 ```
 
-### Czechia (cz)
+### Czechia 🇨🇿 (cz)
 
 `birth_date` is optional
 
 ```rb
 TinValid::CzechiaTin.new(
-  tin: "420901999",
+  tin: "420901/999",
   birth_date: Date.new(1942, 9, 1),
 ).valid?
 ```
 
-### Denmark (dk)
+### Denmark 🇩🇰 (dk)
 
 `birth_date` is optional
 
@@ -135,7 +135,7 @@ TinValid::DenmarkTin.new(
 ).valid?
 ```
 
-### Estonia (ee)
+### Estonia 🇪🇪 (ee)
 
 `birth_date` is optional
 
@@ -146,7 +146,7 @@ TinValid::EstoniaTin.new(
 ).valid?
 ```
 
-### Finland (fi)
+### Finland 🇫🇮 (fi)
 
 `birth_date` is optional
 
@@ -157,7 +157,7 @@ TinValid::FinlandTin.new(
 ).valid?
 ```
 
-### France (fr)
+### France 🇫🇷 (fr)
 
 ```rb
 TinValid::FranceTin.new(tin: "3023217600053").valid?
@@ -171,31 +171,31 @@ TinValid::FranceTin.new(tin: "732829320").siren?
 TinValid::FranceTin.new(tin: "73282932000074").siret?
 ```
 
-### Germany (de)
+### Germany 🇩🇪 (de)
 
 ```rb
 TinValid::GermanyTin.new(tin: "5133081508159").valid?
 ```
 
-### Greece (gr)
+### Greece 🇬🇷 (gr)
 
 ```rb
 TinValid::GreeceTin.new(tin: "999999999").valid?
 ```
 
-### Hungary (hu)
+### Hungary 🇭🇺 (hu)
 
 ```rb
 TinValid::HungaryTin.new(tin: "8071592153").valid?
 ```
 
-### Ireland (ie)
+### Ireland 🇮🇪 (ie)
 
 ```rb
 TinValid::IrelandTin.new(tin: "1234567T").valid?
 ```
 
-### Italy (it)
+### Italy 🇮🇹 (it)
 
 `birth_date` is optional
 
@@ -206,7 +206,7 @@ TinValid::ItalyTin.new(
 ).valid?
 ```
 
-### Latvia (lv)
+### Latvia 🇱🇻 (lv)
 
 `birth_date` is optional
 
@@ -217,7 +217,7 @@ TinValid::LatviaTin.new(
 ).valid?
 ```
 
-### Lithuania (lt)
+### Lithuania 🇱🇹 (lt)
 
 `birth_date` is optional
 
@@ -228,7 +228,7 @@ TinValid::LithuaniaTin.new(
 ).valid?
 ```
 
-### Luxembourg (lu)
+### Luxembourg 🇱🇺 (lu)
 
 `birth_date` is optional
 
@@ -239,19 +239,19 @@ TinValid::LuxembourgTin.new(
 ).valid?
 ```
 
-### Malta (mt)
+### Malta 🇲🇹 (mt)
 
 ```rb
 TinValid::MaltaTin.new(tin: "1234567A").valid?
 ```
 
-### Netherlands (nl)
+### Netherlands 🇳🇱 (nl)
 
 ```rb
 TinValid::NetherlandsTin.new(tin: "174559434").valid?
 ```
 
-### Poland (pl)
+### Poland 🇵🇱 (pl)
 
 `birth_date` is optional
 
@@ -262,13 +262,13 @@ TinValid::PolandTin.new(
 ).valid?
 ```
 
-### Portugal (pt)
+### Portugal 🇵🇹 (pt)
 
 ```rb
 TinValid::PortugalTin.new(tin: "299999998").valid?
 ```
 
-### Romania (ro)
+### Romania 🇷🇴 (ro)
 
 `birth_date` is optional
 
@@ -279,7 +279,7 @@ TinValid::RomaniaTin.new(
 ).valid?
 ```
 
-### Slovakia (sk)
+### Slovakia 🇸🇰 (sk)
 
 `birth_date` is optional
 
@@ -290,19 +290,19 @@ TinValid::SlovakiaTin.new(
 ).valid?
 ```
 
-### Slovenia (si)
+### Slovenia 🇸🇮 (si)
 
 ```rb
 TinValid::SloveniaTin.new(tin: "15012557").valid?
 ```
 
-### Spain (es)
+### Spain 🇪🇸 (es)
 
 ```rb
 TinValid::SpainTin.new(tin: "54237A").valid?
 ```
 
-### Sweden (se)
+### Sweden 🇸🇪 (se)
 
 `birth_date` is optional
 
@@ -313,7 +313,7 @@ TinValid::SwedenTin.new(
 ).valid?
 ```
 
-### United Kingdom (gb)
+### United Kingdom 🇬🇧 (gb)
 
 ```rb
 TinValid::UnitedKingdomTin.new(tin: "9234567890").valid?
