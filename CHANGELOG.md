@@ -1,11 +1,11 @@
 ## [Unreleased]
 
-Features:
-- `TinValid::Tin.new` accept symbols or uppercase country codes.
-- `kind` argument accept symbols.
+## [1.2.1] - 2025-05-22
 
 Fixes:
 - Accept `/` for Czechia 🇨🇿
+- `TinValid::Tin.new` accept symbols or uppercase country codes.
+- `kind` argument accept symbols.
 
 ## [1.2.0] - 2025-05-14
 
