@@ -63,7 +63,7 @@ module TinValid
       when ..15 then (remainder + 55).chr
       when 16 then "H"
       when ..21 then (remainder + 57).chr
-      when 21 then "P"
+      when 22 then "P"
       else (remainder + 59).chr
       end
     end

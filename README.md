@@ -32,8 +32,12 @@ Validate Tax Identification Numbers (TINs) for the following European countries:
 - United Kingdom 🇬🇧
 
 See also the
-[TIN specifications](https://ec.europa.eu/taxation_customs/tin/#/check-tin)
-and the
+[TIN check](https://ec.europa.eu/taxation_customs/tin/#/check-tin),
+the
+[TIN specifications](https://taxation-customs.ec.europa.eu/document/download/d416448b-e055-472d-b0e0-4ffc07a7a407_en?v=1741781900877)
+(link from the
+[Technical information](https://ec.europa.eu/taxation_customs/tin/#/technical-information)
+page) and the
 [descriptions of the structure](https://taxation-customs.ec.europa.eu/online-services/online-services-and-databases-taxation/taxpayer-identification-number-tin_en)
 provided by the European Union.
 

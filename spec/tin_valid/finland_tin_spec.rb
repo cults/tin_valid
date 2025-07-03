@@ -5,6 +5,7 @@ RSpec.describe TinValid::FinlandTin do
     valid_values = [
       ["131052-308T", nil],
       ["131052-308T", Date.new(1952, 10, 13)],
+      ["141095-282P", Date.new(1995, 10, 14)],
     ]
 
     invalid_values = [

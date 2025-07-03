@@ -1,5 +1,8 @@
 ## [Unreleased]
 
+Fixes:
+- Fix Finland checks for tins ending in `P` 🇫🇮
+
 ## [1.2.1] - 2025-05-22
 
 Fixes:
@@ -65,15 +68,15 @@ Features:
 
 ## [0.1.0] - 2025-04-14
 
-- Initial release with:
-  - Austria 🇦🇹
-  - Belgium 🇧🇪
-  - Bulgaria 🇧🇬
-  - Croatia 🇭🇷
-  - Cyprus 🇨🇾
-  - Czechia 🇨🇿
-  - Denmark 🇩🇰
-  - Estonia 🇪🇪
-  - Germany 🇩🇪
-  - Greece 🇬🇷
-  - Sweden 🇸🇪
+Features:
+- Add Austria 🇦🇹
+- Add Belgium 🇧🇪
+- Add Bulgaria 🇧🇬
+- Add Croatia 🇭🇷
+- Add Cyprus 🇨🇾
+- Add Czechia 🇨🇿
+- Add Denmark 🇩🇰
+- Add Estonia 🇪🇪
+- Add Germany 🇩🇪
+- Add Greece 🇬🇷
+- Add Sweden 🇸🇪
