@@ -72,14 +72,15 @@ module TinValid
     # rubocop:disable Metrics/PerceivedComplexity
     def check_serial(serial, year)
       case serial.to_i
-      in 1..3999
+      when 1..3999
         (1900..1999).cover?(birth_year)
-      in 4000..4999, 9000..9999
+      when 4000..4999,
+           9000..9999
         case year.to_i
         in 0..36 then (2000..2036).cover?(birth_year)
         in 36..99 then (1937..1999).cover?(birth_year)
         end
-      in 5000..8999
+      when 5000..8999
         case year.to_i
         in 0..36 then (2000..2036).cover?(birth_year)
         in 37..57 then false
