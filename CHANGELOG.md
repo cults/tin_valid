@@ -2,6 +2,7 @@
 
 Fixes:
 - Fix Finland checks for tins ending in `P` 🇫🇮
+- Fix Denmark check for certain ranges of birth years 🇩🇰
 
 ## [1.2.1] - 2025-05-22
 
