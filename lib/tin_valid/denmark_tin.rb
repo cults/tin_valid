@@ -69,7 +69,6 @@ module TinValid
 
     # rubocop:disable Metrics/CyclomaticComplexity
     # rubocop:disable Metrics/MethodLength
-    # rubocop:disable Metrics/PerceivedComplexity
     def check_serial(serial, year)
       case serial.to_i
       when 1..3999
@@ -90,6 +89,5 @@ module TinValid
     end
     # rubocop:enable Metrics/CyclomaticComplexity
     # rubocop:enable Metrics/MethodLength
-    # rubocop:enable Metrics/PerceivedComplexity
   end
 end
