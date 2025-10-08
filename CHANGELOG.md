@@ -1,6 +1,7 @@
 ## [Unreleased]
 
 Fixes:
+- Fix Bulgaria to accept TINs starting with `10` instead of `00` 🇧🇬
 - Fix Finland checks for tins ending in `P` 🇫🇮
 - Fix Denmark check for certain ranges of birth years 🇩🇰
 
