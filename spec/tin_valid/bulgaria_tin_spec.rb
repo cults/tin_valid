@@ -4,6 +4,7 @@ RSpec.describe TinValid::BulgariaTin do
   describe "#valid?" do
     valid_values = [
       ["7501010010", nil],
+      ["1042054007", Date.new(2000, 2, 5)],
       ["7501010010", Date.new(1975, 1, 1)],
     ]
 

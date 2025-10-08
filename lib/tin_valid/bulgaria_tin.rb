@@ -35,9 +35,17 @@ module TinValid
     }x
     private_constant :MATCHER
 
+    def accepted_date?(year, month, day)
+      if year == "10"
+        valid_date?(year, month, day) || valid_date?("00", month, day)
+      else
+        valid_date?(year, month, day)
+      end
+    end
+
     # rubocop:disable Metrics/AbcSize
     # rubocop:disable Metrics/MethodLength
-    def accepted_date?(year, month, day)
+    def valid_date?(year, month, day)
       month = month.to_i
       day = day.to_i
 
