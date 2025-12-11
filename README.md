@@ -1,6 +1,6 @@
 # TinValid 🇪🇺
 
-Validate Tax Identification Numbers (TINs) for the following European countries:
+Ruby gem to validate Tax Identification Numbers (TINs) for the following European countries:
 
 - Austria 🇦🇹
 - Belgium 🇧🇪
