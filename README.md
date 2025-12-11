@@ -49,13 +49,6 @@ Add the gem to your application’s Gemfile by executing:
 bundle add tin_valid
 ```
 
-If bundler is not being used to manage dependencies, install the gem by
-executing:
-
-```bash
-gem install tin_valid
-```
-
 ## Usage
 
 Check a TIN by providing the country code.
@@ -81,23 +74,19 @@ TinValid::AustriaTin.new(
 
 ### Belgium 🇧🇪 (be)
 
-`birth_date` is optional
-
 ```rb
 TinValid::BelgiumTin.new(
   tin: "00012511119",
-  birth_date: Date.new(1900, 1, 25),
+  birth_date: Date.new(1900, 1, 25), # optional
 ).valid?
 ```
 
 ### Bulgaria 🇧🇬 (bg)
 
-`birth_date` is optional
-
 ```rb
 TinValid::BulgariaTin.new(
   tin: "7501010010",
-  birth_date: Date.new(1975, 1, 1),
+  birth_date: Date.new(1975, 1, 1), # optional
 ).valid?
 ```
 
@@ -111,53 +100,46 @@ TinValid::CroatiaTin.new(
 
 ### Cyprus 🇨🇾 (cy)
 
-`kind` is optional and can be `"individual"` or `"company"`
-
 ```rb
-TinValid::CyprusTin.new(tin: "00123123T", kind: "individual").valid?
+TinValid::CyprusTin.new(
+  tin: "00123123T",
+  kind: "individual", # optional, can be "individual" or "company"
+).valid?
 ```
 
 ### Czechia 🇨🇿 (cz)
 
-`birth_date` is optional
-
 ```rb
 TinValid::CzechiaTin.new(
   tin: "420901/999",
-  birth_date: Date.new(1942, 9, 1),
+  birth_date: Date.new(1942, 9, 1), # optional
 ).valid?
 ```
 
 ### Denmark 🇩🇰 (dk)
 
-`birth_date` is optional
-
 ```rb
 TinValid::DenmarkTin.new(
   tin: "0101111113",
-  birth_date: Date.new(1911, 1, 1),
+  birth_date: Date.new(1911, 1, 1), # optional
 ).valid?
 ```
 
 ### Estonia 🇪🇪 (ee)
 
-`birth_date` is optional
-
 ```rb
 TinValid::EstoniaTin.new(
   tin: "37102250382",
-  birth_date: Date.new(1971, 2, 25),
+  birth_date: Date.new(1971, 2, 25), # optional
 ).valid?
 ```
 
 ### Finland 🇫🇮 (fi)
 
-`birth_date` is optional
-
 ```rb
 TinValid::FinlandTin.new(
   tin: "131052-308T",
-  birth_date: Date.new(1952, 10, 13),
+  birth_date: Date.new(1952, 10, 13), # optional
 ).valid?
 ```
 
@@ -201,45 +183,37 @@ TinValid::IrelandTin.new(tin: "1234567T").valid?
 
 ### Italy 🇮🇹 (it)
 
-`birth_date` is optional
-
 ```rb
 TinValid::ItalyTin.new(
   tin: "DMLPRY77D15H501F",
-  birth_date: Date.new(1977, 4, 15),
+  birth_date: Date.new(1977, 4, 15), # optional
 ).valid?
 ```
 
 ### Latvia 🇱🇻 (lv)
 
-`birth_date` is optional
-
 ```rb
 TinValid::LatviaTin.new(
   tin: "01011012345",
-  birth_date: Date.new(1910, 1, 1),
+  birth_date: Date.new(1910, 1, 1), # optional
 ).valid?
 ```
 
 ### Lithuania 🇱🇹 (lt)
 
-`birth_date` is optional
-
 ```rb
 TinValid::LithuaniaTin.new(
   tin: "10101010005",
-  birth_date: Date.new(2001, 1, 1),
+  birth_date: Date.new(2001, 1, 1), # optional
 ).valid?
 ```
 
 ### Luxembourg 🇱🇺 (lu)
 
-`birth_date` is optional
-
 ```rb
 TinValid::LuxembourgTin.new(
   tin: "1893120105732",
-  birth_date: Date.new(1893, 12, 1),
+  birth_date: Date.new(1893, 12, 1), # optional
 ).valid?
 ```
 
@@ -257,12 +231,10 @@ TinValid::NetherlandsTin.new(tin: "174559434").valid?
 
 ### Poland 🇵🇱 (pl)
 
-`birth_date` is optional
-
 ```rb
 TinValid::PolandTin.new(
   tin: "02070803628",
-  birth_date: Date.new(1902, 7, 8),
+  birth_date: Date.new(1902, 7, 8), # optional
 ).valid?
 ```
 
@@ -274,23 +246,19 @@ TinValid::PortugalTin.new(tin: "299999998").valid?
 
 ### Romania 🇷🇴 (ro)
 
-`birth_date` is optional
-
 ```rb
 TinValid::RomaniaTin.new(
   tin: "8001011234567",
-  birth_date: Date.new(2000, 10, 11),
+  birth_date: Date.new(2000, 10, 11), # optional
 ).valid?
 ```
 
 ### Slovakia 🇸🇰 (sk)
 
-`birth_date` is optional
-
 ```rb
 TinValid::SlovakiaTin.new(
   tin: "7711167420",
-  birth_date: Date.new(1977, 11, 16),
+  birth_date: Date.new(1977, 11, 16), # optional
 ).valid?
 ```
 
@@ -308,12 +276,10 @@ TinValid::SpainTin.new(tin: "54237A").valid?
 
 ### Sweden 🇸🇪 (se)
 
-`birth_date` is optional
-
 ```rb
 TinValid::SwedenTin.new(
   tin: "640823-3234",
-  birth_date: Date.new(1964, 8, 23),
+  birth_date: Date.new(1964, 8, 23), # optional
 ).valid?
 ```
 
@@ -329,9 +295,12 @@ After checking out the repo, run `bin/setup` to install dependencies. Then, run
 `bin/rspec` to run the tests. You can also run `bin/console` for an interactive
 prompt that will allow you to experiment.
 
-To install this gem onto your local machine, run `bin/rake install`. To
-release a new version, update the version number in `version.rb`, call `bundle`
-and then create a commit using:
+To install this gem onto your local machine, run `bin/rake install`.
+
+## Release a new version
+
+Update the version number in `version.rb`, call `bundle` and then create a commit
+using:
 
 ```sh
 git commit -m "v`ruby -r./lib/tin_valid/version <<< 'puts TinValid::VERSION + \" 🎉\"'`"
