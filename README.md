@@ -299,8 +299,8 @@ To install this gem onto your local machine, run `bin/rake install`.
 
 ## Release a new version
 
-Update the version number in `version.rb`, call `bundle` and then create a commit
-using:
+Update the version number in `version.rb`, call `bundle`, add the files using
+`git add --patch` and then create a commit using:
 
 ```sh
 git commit -m "v`ruby -r./lib/tin_valid/version <<< 'puts TinValid::VERSION + \" 🎉\"'`"

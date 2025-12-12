@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+## [1.3.0] - 2025-12-12
+
 Features:
 - Add `TinValid::COUNTRY_CODES` to get available country codes.
 
