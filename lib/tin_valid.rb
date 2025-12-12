@@ -33,4 +33,35 @@ require_relative "tin_valid/spain_tin"
 require_relative "tin_valid/sweden_tin"
 require_relative "tin_valid/united_kingdom_tin"
 
-module TinValid; end
+module TinValid
+  COUNTRY_CODES = %w[
+    at
+    be
+    bg
+    cy
+    cz
+    de
+    dk
+    ee
+    es
+    fi
+    fr
+    gb
+    gr
+    hr
+    hu
+    ie
+    it
+    lt
+    lu
+    lv
+    mt
+    nl
+    pl
+    pt
+    ro
+    se
+    si
+    sk
+  ].freeze
+end
