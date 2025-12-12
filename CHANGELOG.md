@@ -1,5 +1,8 @@
 ## [Unreleased]
 
+Features:
+- Add `TinValid::COUNTRY_CODES` to get available country codes.
+
 Fixes:
 - Fix Bulgaria to accept TINs starting with `10` instead of `00` 🇧🇬
 - Fix Finland checks for tins ending in `P` 🇫🇮
@@ -16,7 +19,7 @@ Fixes:
 
 Features:
 - Add generic `TinValid::Tin.new(country_code: "…", tin: "…").valid?`
-- Add `#siren?` and `#siret?` on `TinValid::FranceTin`
+- Add `#siren?` and `#siret?` on `TinValid::FranceTin` 🇫🇷
 
 Fixes:
 - Accept SIRET for France 🇫🇷
