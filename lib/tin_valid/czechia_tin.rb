@@ -37,10 +37,12 @@ module TinValid
     }x
     private_constant :MATCHER_V2
 
+    def normalized = @normalized ||= tin&.delete_prefix("CZ")
+
     def valid_v1?
-      match = MATCHER_V1.match(tin)
+      match = MATCHER_V1.match(normalized)
       return false unless match
-      return false if tin == "000000000"
+      return false if normalized == "000000000"
       return true if birth_date.nil?
       return false if year_of_birth >= 1954
 
@@ -55,9 +57,9 @@ module TinValid
     end
 
     def valid_v2?
-      match = MATCHER_V2.match(tin)
+      match = MATCHER_V2.match(normalized)
       return false unless match
-      return false if tin == "0000000000"
+      return false if normalized == "0000000000"
       return true if birth_date.nil?
       return false if year_of_birth < 1954
 
