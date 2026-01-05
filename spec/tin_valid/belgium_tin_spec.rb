@@ -5,6 +5,7 @@ RSpec.describe TinValid::BelgiumTin do
     valid_values = [
       ["00012511119", nil],
       ["00012511148", nil],
+      ["00.01.25-111.48", nil],
       ["00012511119", Date.new(1900, 1, 25)],
       ["00012511148", Date.new(2000, 1, 25)],
     ]

@@ -12,7 +12,7 @@ module TinValid
     def valid?
       return false unless match
 
-      number = tin[..-3]
+      number = normalized[..-3]
       valid_check?("19#{year}", month, day, number) ||
         valid_check?("20#{year}", month, day, "2#{number}")
     end
@@ -32,7 +32,8 @@ module TinValid
     }x
     private_constant :MATCHER
 
-    def match = @match ||= MATCHER.match(tin)
+    def match = @match ||= MATCHER.match(normalized)
+    def normalized = @normalized ||= tin&.gsub(/[-.]+/, "")
     def year = match[:year]
     def month = match[:month]
     def day = match[:day]
