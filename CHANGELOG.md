@@ -2,6 +2,7 @@
 
 Fixes:
 - Fix Belgium to ignore `-` and `.` 🇧🇪
+- Fix Czechia to accept `CZ` prefix 🇨🇿
 
 ## [1.3.0] - 2025-12-12
 
