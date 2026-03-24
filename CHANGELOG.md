@@ -3,6 +3,7 @@
 Fixes:
 - Fix Belgium to ignore `-` and `.` 🇧🇪
 - Fix Czechia to accept `CZ` prefix 🇨🇿
+- Fix Sweden TINs versions with 4-digit years 🇸🇪
 
 ## [1.3.0] - 2025-12-12
 

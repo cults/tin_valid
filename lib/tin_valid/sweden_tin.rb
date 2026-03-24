@@ -21,8 +21,7 @@ module TinValid
         day = match[:day]
         next false unless date_valid?(year, month, day)
 
-        id = match[:id]
-        match[:check].to_i == checksum("#{year[..2]}#{month}#{day}#{id}")
+        check_match?(year:, month:, day:, id: match[:id], check: match[:check])
       end
     end
 
@@ -69,6 +68,11 @@ module TinValid
       }x,
     ].freeze
     private_constant :VERSIONS
+
+    def check_match?(year:, month:, day:, id:, check:)
+      checkyear = year.size == 4 ? year[2..] : year
+      check.to_i == checksum("#{checkyear}#{month}#{day}#{id}")
+    end
 
     def checksum(numbers)
       # 1. Multiply the values of each position by the corresponding weight:
