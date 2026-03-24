@@ -4,6 +4,8 @@ RSpec.describe TinValid::SwedenTin do
   describe "#valid?" do
     valid_values = [
       ["640883-3231", nil],
+      ["199109141086", nil],
+      ["040731-1372", nil],
       ["640823-3234", nil],
       ["640823-3234", Date.new(1964, 8, 23)],
     ]
