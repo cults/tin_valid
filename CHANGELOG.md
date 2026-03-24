@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+## [1.3.1] - 2026-03-24
+
 Fixes:
 - Fix Belgium to ignore `-` and `.` 🇧🇪
 - Fix Czechia to accept `CZ` prefix 🇨🇿
