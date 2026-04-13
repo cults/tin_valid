@@ -15,7 +15,7 @@ module TinValid
     def valid?
       match = MATCHER.match(tin)
       return false unless match
-      return false if tin == "0000000000"
+      return false if normalized_tin == "0000000000"
 
       if birth_date
         year = "#{birth_century}#{match[:year]}"
@@ -35,6 +35,7 @@ module TinValid
       (?<day>[0-3][0-9])
       (?<month>[0-1][0-9])
       (?<year>[0-9]{2})
+      -?
       (?<serial>
         [0-9]{3}
         (?<check>[0-9])
@@ -42,6 +43,8 @@ module TinValid
       \z
     }x
     private_constant :MATCHER
+
+    def normalized_tin = @normalized_tin ||= tin.sub("-", "")
 
     def birth_century = birth_date.strftime("%Y")[..1]
     def birth_year = birth_date.year
@@ -51,7 +54,7 @@ module TinValid
       weights =
         [4, 3, 2, 7, 6, 5, 4, 3, 2]
           .each_with_index
-          .map { |char, index| char.to_i * tin[index].to_i }
+          .map { |char, index| char.to_i * normalized_tin[index].to_i }
 
       # 2. Add up the results of the above multiplications;
       sum = weights.sum

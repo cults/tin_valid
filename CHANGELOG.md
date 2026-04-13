@@ -1,5 +1,8 @@
 ## [Unreleased]
 
+Fixes:
+- Fix Denmark to ignore a `-` 🇩🇰
+
 ## [1.3.1] - 2026-03-24
 
 Fixes:
