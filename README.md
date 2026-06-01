@@ -226,7 +226,10 @@ TinValid::MaltaTin.new(tin: "1234567A").valid?
 ### Netherlands 🇳🇱 (nl)
 
 ```rb
-TinValid::NetherlandsTin.new(tin: "174559434").valid?
+TinValid::NetherlandsTin.new(
+  tin: "174559434",
+  kind: "individual", # optional, can be "individual" or "company"
+).valid?
 ```
 
 ### Poland 🇵🇱 (pl)

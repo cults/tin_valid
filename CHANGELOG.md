@@ -1,16 +1,19 @@
 ## [Unreleased]
 
+Fixes:
+- Accept RSIN format for companies in the Netherlands 🇳🇱
+
 ## [1.3.2] - 2026-05-25
 
 Fixes:
-- Fix Denmark to ignore a `-` 🇩🇰
+- Ignore a `-` for Denmark 🇩🇰
 
 ## [1.3.1] - 2026-03-24
 
 Fixes:
-- Fix Belgium to ignore `-` and `.` 🇧🇪
-- Fix Czechia to accept `CZ` prefix 🇨🇿
-- Fix Sweden TINs versions with 4-digit years 🇸🇪
+- Ignore `-` and `.` for Belgium 🇧🇪
+- Accept `CZ` prefix for Czechia 🇨🇿
+- Accept TINs versions with 4-digit years for Sweden 🇸🇪
 
 ## [1.3.0] - 2025-12-12
 
@@ -18,9 +21,9 @@ Features:
 - Add `TinValid::COUNTRY_CODES` to get available country codes.
 
 Fixes:
-- Fix Bulgaria to accept TINs starting with `10` instead of `00` 🇧🇬
-- Fix Finland checks for tins ending in `P` 🇫🇮
-- Fix Denmark check for certain ranges of birth years 🇩🇰
+- Accept TINs starting with `10` instead of `00` for Bulgaria 🇧🇬
+- Fix check for TINs ending in `P` for Finland 🇫🇮
+- Fix check for certain ranges of birth years for Denmark 🇩🇰
 
 ## [1.2.1] - 2025-05-22
 
@@ -41,14 +44,14 @@ Fixes:
 ## [1.1.2] - 2025-05-06
 
 Fixes:
-- Fix Luxembourg check 🇱🇺
+- Fix check for Luxembourg 🇱🇺
 - Accept SIREN for France 🇫🇷
 
 ## [1.1.1] - 2025-04-28
 
 Fixes:
-- Fix birth date check for Italy when year is between 1900..1909 or between
-  2000..2009 🇮🇹
+- Fix birth date check when year is between 1900..1909 or between 2000..2009 for
+  Italy 🇮🇹
 
 ## [1.1.0] - 2025-04-18
 

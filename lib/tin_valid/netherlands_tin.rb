@@ -2,17 +2,25 @@
 
 module TinValid
   class NetherlandsTin
-    def initialize(tin:)
+    def initialize(tin:, kind: nil)
       @tin = tin
+      @kind = kind.to_s
     end
 
-    attr_reader :tin
+    attr_reader :tin, :kind
 
     def valid?
       return false unless /\A[0-9]{9}\z/.match?(tin)
       return false if tin == "000000000"
 
-      tin[-1].to_i == check
+      if kind == "individual"
+        # BSN (Burgerservicenummer)
+        tin[-1].to_i == check
+      else
+        # No public algorithm found for checking the RSIN (Rechtspersonen en
+        # Samenwerkingsverbanden Informatienummer)
+        true
+      end
     end
 
     private

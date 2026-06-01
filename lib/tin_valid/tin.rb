@@ -38,7 +38,7 @@ module TinValid
       in "lu" then LuxembourgTin.new(tin:, birth_date:).valid?
       in "lv" then LatviaTin.new(tin:, birth_date:).valid?
       in "mt" then MaltaTin.new(tin:).valid?
-      in "nl" then NetherlandsTin.new(tin:).valid?
+      in "nl" then NetherlandsTin.new(tin:, kind:).valid?
       in "pl" then PolandTin.new(tin:, birth_date:).valid?
       in "pt" then PortugalTin.new(tin:).valid?
       in "ro" then RomaniaTin.new(tin:, birth_date:).valid?
