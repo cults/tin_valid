@@ -1,18 +1,18 @@
-## [Unreleased]
+## Unreleased
 
-## [1.3.2] - 2026-05-25
+## 1.3.2 - 2026-05-25
 
 Fixes:
 - Ignore a `-` for Denmark 🇩🇰
 
-## [1.3.1] - 2026-03-24
+## 1.3.1 - 2026-03-24
 
 Fixes:
 - Ignore `-` and `.` for Belgium 🇧🇪
 - Accept `CZ` prefix for Czechia 🇨🇿
 - Accept TINs versions with 4-digit years for Sweden 🇸🇪
 
-## [1.3.0] - 2025-12-12
+## 1.3.0 - 2025-12-12
 
 Features:
 - Add `TinValid::COUNTRY_CODES` to get available country codes.
@@ -22,14 +22,14 @@ Fixes:
 - Fix check for TINs ending in `P` for Finland 🇫🇮
 - Fix check for certain ranges of birth years for Denmark 🇩🇰
 
-## [1.2.1] - 2025-05-22
+## 1.2.1 - 2025-05-22
 
 Fixes:
 - Accept `/` for Czechia 🇨🇿
 - `TinValid::Tin.new` accept symbols or uppercase country codes.
 - `kind` argument accept symbols.
 
-## [1.2.0] - 2025-05-14
+## 1.2.0 - 2025-05-14
 
 Features:
 - Add generic `TinValid::Tin.new(country_code: "…", tin: "…").valid?`
@@ -38,19 +38,19 @@ Features:
 Fixes:
 - Accept SIRET for France 🇫🇷
 
-## [1.1.2] - 2025-05-06
+## 1.1.2 - 2025-05-06
 
 Fixes:
 - Fix check for Luxembourg 🇱🇺
 - Accept SIREN for France 🇫🇷
 
-## [1.1.1] - 2025-04-28
+## 1.1.1 - 2025-04-28
 
 Fixes:
 - Fix birth date check when year is between 1900..1909 or between 2000..2009 for
   Italy 🇮🇹
 
-## [1.1.0] - 2025-04-18
+## 1.1.0 - 2025-04-18
 
 Features:
 - Add Finland 🇫🇮
@@ -60,7 +60,7 @@ Fixes:
 - Test against clearly invalid codes 00000… and 123456…
 - Check that all dates are in the past
 
-## [1.0.0] - 2025-04-17
+## 1.0.0 - 2025-04-17
 
 Features:
 - Add Italy 🇮🇹
@@ -77,7 +77,7 @@ Features:
 - Add Spain 🇪🇸
 - Add United Kingdom 🇬🇧
 
-## [0.1.1] - 2025-04-15
+## 0.1.1 - 2025-04-15
 
 Features:
 - Add Germany 🇩🇪
@@ -85,7 +85,7 @@ Features:
 - Add Hungary 🇭🇺
 - Add Ireland 🇮🇪
 
-## [0.1.0] - 2025-04-14
+## 0.1.0 - 2025-04-14
 
 Features:
 - Add Austria 🇦🇹
