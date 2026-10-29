@@ -1,5 +1,8 @@
 ## Unreleased
 
+Features:
+- Add `kind: "company"` argument to only accept SIRET and SIREN for France 🇫🇷
+
 ## 1.3.2 - 2026-05-25
 
 Fixes:

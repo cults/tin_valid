@@ -35,6 +35,35 @@ RSpec.describe TinValid::FranceTin do
         it { expect(described_class.new(tin:).valid?).to be(false) }
       end
     end
+
+    valid_company_values = %w[
+      552100554
+      732829320
+      73282932000074
+    ]
+
+    invalid_company_values = %w[
+      3023217600053
+      123456789
+      00000000000000
+      73282932000075
+    ]
+
+    valid_company_values.each do |tin|
+      context "with valid #{tin.inspect}" do
+        it do
+          expect(described_class.new(tin:, kind: "company").valid?).to be(true)
+        end
+      end
+    end
+
+    invalid_company_values.each do |tin|
+      context "with invalid #{tin.inspect}" do
+        it do
+          expect(described_class.new(tin:, kind: "company").valid?).to be(false)
+        end
+      end
+    end
   end
 
   describe "#siren?" do

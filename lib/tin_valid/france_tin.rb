@@ -3,13 +3,14 @@
 # https://www.economie.gouv.fr/cedef/fiches-pratiques/quest-ce-que-le-nif
 module TinValid
   class FranceTin
-    def initialize(tin:)
+    def initialize(tin:, kind: nil)
       @tin = tin
+      @kind = kind
     end
 
-    attr_reader :tin
+    attr_reader :tin, :kind
 
-    def valid? = valid_v1? || siren? || siret?
+    def valid? = siren? || siret? || (kind != "company" && valid_v1?)
 
     # https://fr.wikipedia.org/wiki/Syst%C3%A8me_d%27identification_du_r%C3%A9pertoire_des_entreprises
     def siren?
