@@ -150,7 +150,7 @@ TinValid::FranceTin.new(tin: "3023217600053").valid?
 ```
 
 ```rb
-TinValid::FranceTin.new(tin: "732829320", type: "company").valid?
+TinValid::FranceTin.new(tin: "732829320", kind: "company").valid?
 ```
 
 ```rb
