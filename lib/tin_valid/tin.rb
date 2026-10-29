@@ -27,7 +27,7 @@ module TinValid
       in "ee" then EstoniaTin.new(tin:, birth_date:).valid?
       in "es" then SpainTin.new(tin:).valid?
       in "fi" then FinlandTin.new(tin:).valid?
-      in "fr" then FranceTin.new(tin:).valid?
+      in "fr" then FranceTin.new(tin:, kind:).valid?
       in "gb" then UnitedKingdomTin.new(tin:).valid?
       in "gr" then GreeceTin.new(tin:).valid?
       in "hr" then CroatiaTin.new(tin:).valid?
