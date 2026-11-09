@@ -19,9 +19,9 @@ module TinValid
       instance.respond_to?(:normalized) ? instance.normalized : tin.to_s
     end
 
-    # rubocop:disable Metrics/AbcSize
-    # rubocop:disable Metrics/CyclomaticComplexity
-    # rubocop:disable Metrics/MethodLength
+    # rubocop:disable-next Metrics/AbcSize
+    # rubocop:disable-next Metrics/CyclomaticComplexity
+    # rubocop:disable-next Metrics/MethodLength
     def instance
       @instance ||=
         case country_code
@@ -55,8 +55,5 @@ module TinValid
         in "sk" then SlovakiaTin.new(tin:)
         end
     end
-    # rubocop:enable Metrics/AbcSize
-    # rubocop:enable Metrics/CyclomaticComplexity
-    # rubocop:enable Metrics/MethodLength
   end
 end

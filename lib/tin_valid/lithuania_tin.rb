@@ -33,8 +33,8 @@ module TinValid
     }x
     private_constant :MATCHER
 
-    # rubocop:disable Metrics/AbcSize
-    # rubocop:disable Metrics/MethodLength
+    # rubocop:disable-next Metrics/AbcSize
+    # rubocop:disable-next Metrics/MethodLength
     def check
       # 1. Multiply the values of each position by the corresponding weight:
       weights =
@@ -69,7 +69,5 @@ module TinValid
 
       0
     end
-    # rubocop:enable Metrics/AbcSize
-    # rubocop:enable Metrics/MethodLength
   end
 end

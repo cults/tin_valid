@@ -43,8 +43,8 @@ module TinValid
       end
     end
 
-    # rubocop:disable Metrics/AbcSize
-    # rubocop:disable Metrics/MethodLength
+    # rubocop:disable-next Metrics/AbcSize
+    # rubocop:disable-next Metrics/MethodLength
     def valid_date?(year, month, day)
       month = month.to_i
       day = day.to_i
@@ -61,8 +61,6 @@ module TinValid
         birth_date == date("20#{year}", month - 40, day)
       end
     end
-    # rubocop:enable Metrics/AbcSize
-    # rubocop:enable Metrics/MethodLength
 
     def birth_year = birth_date.year
 
