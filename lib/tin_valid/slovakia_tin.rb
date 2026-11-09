@@ -12,12 +12,12 @@ module TinValid
     attr_reader :tin, :birth_date
 
     def valid?
-      return false if %w[0000000000 000000000 1234567890].include?(tin)
+      return false if %w[0000000000 000000000 1234567890].include?(normalized)
 
       valid_v2? || valid_v1?
     end
 
-    def normalized = tin.tr("/", "")
+    def normalized = @normalized ||= tin.to_s.tr("/", "")
 
     private
 
@@ -40,9 +40,9 @@ module TinValid
     }x
     private_constant :MATCHER_V2
 
-    # rubocop:disable Metrics/MethodLength
+    # rubocop:disable-next Metrics/MethodLength
     def valid_v1?
-      match = MATCHER_V1.match(tin)
+      match = MATCHER_V1.match(normalized)
       return false unless match
 
       year = match[:year].to_i
@@ -58,9 +58,8 @@ module TinValid
 
       true
     end
-    # rubocop:enable Metrics/MethodLength
 
-    def valid_v2? = MATCHER_V2.match?(tin)
+    def valid_v2? = MATCHER_V2.match?(normalized)
 
     def birth_century = birth_date.year.to_s[..1]
   end

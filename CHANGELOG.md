@@ -1,7 +1,8 @@
 ## Unreleased
 
 Features:
-- Add `kind: "company"` argument to only accept SIRET and SIREN for France 🇫🇷
+- Add `kind: "company"` to only accept SIRET and SIREN on companies for France 🇫🇷
+- Add `#normalized` to `TinValid::Tin` to normalize for Austria 🇦🇹, Belgium 🇧🇪, Czechia 🇨🇿, Denmark 🇩🇰, and Slovakia 🇸🇰
 
 ## 1.3.2 - 2026-05-25
 

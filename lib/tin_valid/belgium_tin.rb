@@ -17,6 +17,10 @@ module TinValid
         valid_check?("20#{year}", month, day, "2#{number}")
     end
 
+    def normalized
+      @normalized ||= tin.to_s.gsub(/[-.]+/, "")
+    end
+
     private
 
     attr_reader :tin, :birth_date
@@ -33,7 +37,6 @@ module TinValid
     private_constant :MATCHER
 
     def match = @match ||= MATCHER.match(normalized)
-    def normalized = @normalized ||= tin&.gsub(/[-.]+/, "")
     def year = match[:year]
     def month = match[:month]
     def day = match[:day]

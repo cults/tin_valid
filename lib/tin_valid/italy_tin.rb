@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module TinValid
-  # rubocop:disable Metrics/ClassLength
+  # rubocop:disable-next Metrics/ClassLength
   class ItalyTin
     include TinValid::Helpers
 
@@ -157,5 +157,4 @@ module TinValid
     }.freeze
     private_constant :ODD_NUMBER_TABLE
   end
-  # rubocop:enable Metrics/ClassLength
 end

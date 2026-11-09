@@ -24,7 +24,7 @@ module TinValid
     MATCHER = %r{\A[0-9]{2}-?[0-9]{3}/?[0-9]{4}\z}
     private_constant :MATCHER
 
-    # rubocop:disable Metrics/AbcSize
+    # rubocop:disable-next Metrics/AbcSize
     def check
       # 1. Multiply the values of each position by the corresponding weight:
       # - C1: 1
@@ -53,6 +53,5 @@ module TinValid
       # unit digit of this operation is the check digit.
       (100 - sum).to_s[-1]
     end
-    # rubocop:enable Metrics/AbcSize
   end
 end

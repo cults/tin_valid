@@ -23,7 +23,7 @@ module TinValid
       tin.to_i != 0
     end
 
-    # rubocop:disable Metrics/AbcSize
+    # rubocop:disable-next Metrics/AbcSize
     def valid_v2?
       # C1: Must never be 0.
       return false unless /\A[1-9][0-9]{10}\z/.match?(tin)
@@ -44,7 +44,6 @@ module TinValid
 
       tin[-1].to_i == check_v2
     end
-    # rubocop:enable Metrics/AbcSize
 
     def check_v2
       # 1. Initialize the variable X to 10.
