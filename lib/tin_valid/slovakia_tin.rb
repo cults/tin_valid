@@ -40,7 +40,7 @@ module TinValid
     }x
     private_constant :MATCHER_V2
 
-    # rubocop:disable Metrics/MethodLength
+    # rubocop:disable-next Metrics/MethodLength
     def valid_v1?
       match = MATCHER_V1.match(normalized)
       return false unless match
@@ -58,7 +58,6 @@ module TinValid
 
       true
     end
-    # rubocop:enable Metrics/MethodLength
 
     def valid_v2? = MATCHER_V2.match?(normalized)
 

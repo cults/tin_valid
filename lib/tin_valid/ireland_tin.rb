@@ -15,7 +15,7 @@ module TinValid
 
     private
 
-    # rubocop:disable Metrics/AbcSize
+    # rubocop:disable-next Metrics/AbcSize
     def check
       # 1. In reverse order, each digit is multiplied by a weight started at 2:
       weights = 8.downto(2)
@@ -35,7 +35,6 @@ module TinValid
       # 0=”W”, 1=”A”, 2=”B”, 3=”C”… 22=”V”
       number_to_letter(sum % 23)
     end
-    # rubocop:enable Metrics/AbcSize
 
     def letter_to_number(letter)
       return 0 if letter.nil?

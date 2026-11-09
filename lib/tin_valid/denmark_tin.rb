@@ -11,7 +11,7 @@ module TinValid
 
     attr_reader :tin, :birth_date
 
-    # rubocop:disable Metrics/AbcSize
+    # rubocop:disable-next Metrics/AbcSize
     def valid?
       match = MATCHER.match(tin)
       return false unless match
@@ -26,7 +26,6 @@ module TinValid
 
       match[:check].to_i == checksum
     end
-    # rubocop:enable Metrics/AbcSize
 
     def normalized = @normalized ||= tin.to_s.sub("-", "")
 
