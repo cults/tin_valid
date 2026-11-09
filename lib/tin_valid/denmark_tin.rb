@@ -15,7 +15,7 @@ module TinValid
     def valid?
       match = MATCHER.match(tin)
       return false unless match
-      return false if normalized_tin == "0000000000"
+      return false if normalized == "0000000000"
 
       if birth_date
         year = "#{birth_century}#{match[:year]}"
@@ -27,6 +27,8 @@ module TinValid
       match[:check].to_i == checksum
     end
     # rubocop:enable Metrics/AbcSize
+
+    def normalized = @normalized ||= tin.to_s.sub("-", "")
 
     private
 
@@ -44,8 +46,6 @@ module TinValid
     }x
     private_constant :MATCHER
 
-    def normalized_tin = @normalized_tin ||= tin.sub("-", "")
-
     def birth_century = birth_date.strftime("%Y")[..1]
     def birth_year = birth_date.year
 
@@ -54,7 +54,7 @@ module TinValid
       weights =
         [4, 3, 2, 7, 6, 5, 4, 3, 2]
           .each_with_index
-          .map { |char, index| char.to_i * normalized_tin[index].to_i }
+          .map { |char, index| char.to_i * normalized[index].to_i }
 
       # 2. Add up the results of the above multiplications;
       sum = weights.sum

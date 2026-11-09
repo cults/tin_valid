@@ -13,6 +13,8 @@ module TinValid
 
     def valid? = valid_v1? || valid_v2?
 
+    def normalized = @normalized ||= tin.to_s.delete_prefix("CZ")
+
     private
 
     MATCHER_V1 = %r{
@@ -36,8 +38,6 @@ module TinValid
       \z
     }x
     private_constant :MATCHER_V2
-
-    def normalized = @normalized ||= tin&.delete_prefix("CZ")
 
     def valid_v1?
       match = MATCHER_V1.match(normalized)
