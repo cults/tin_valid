@@ -13,5 +13,7 @@ module TinValid
 
       tin != "000000000" && tin != "123456789"
     end
+
+    def normalized = tin
   end
 end

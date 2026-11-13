@@ -11,13 +11,9 @@ module TinValid
 
     attr_reader :country_code, :tin, :birth_date, :kind
 
-    def valid?
-      !!instance&.valid?
-    end
+    def valid? = !!instance&.valid?
 
-    def normalized
-      instance.respond_to?(:normalized) ? instance.normalized : tin.to_s
-    end
+    def normalized = instance.normalized
 
     # rubocop:disable-next Metrics/AbcSize
     # rubocop:disable-next Metrics/CyclomaticComplexity

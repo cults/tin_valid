@@ -9,9 +9,10 @@ module TinValid
     attr_reader :tin
 
     def valid?
-      /\A[0-9]{7}[A-W][A-IW]?\z/.match?(tin) &&
-        tin.chars[7] == check
+      /\A[0-9]{7}[A-W][A-IW]?\z/.match?(tin) && tin.chars[7] == check
     end
+
+    def normalized = tin
 
     private
 
