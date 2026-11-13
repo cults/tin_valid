@@ -23,6 +23,8 @@ module TinValid
       check1? && check2?
     end
 
+    def normalized = tin
+
     private
 
     MATCHER = %r{

@@ -20,6 +20,8 @@ module TinValid
       tin[-1].to_i == check
     end
 
+    def normalized = tin
+
     private
 
     MATCHER = %r{
