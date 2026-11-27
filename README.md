@@ -179,6 +179,14 @@ TinValid::GreeceTin.new(tin: "999999999").valid?
 TinValid::HungaryTin.new(tin: "8071592153").valid?
 ```
 
+```rb
+TinValid::HungaryTin.new(tin: "25099999-2-14", kind: "company").valid?
+```
+
+```rb
+TinValid::HungaryTin.new(tin: "HU25099999", kind: "company").valid?
+```
+
 ### Ireland 🇮🇪 (ie)
 
 ```rb
