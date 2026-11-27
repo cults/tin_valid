@@ -8,7 +8,7 @@ module TinValid
 
     attr_reader :tin
 
-    def valid? = valid_format_1? || valid_format_2?
+    def valid? = valid_v1? || valid_v2?
 
     def normalized = tin
 
@@ -33,7 +33,7 @@ module TinValid
     }x
     private_constant :MATCHER_V2
 
-    def valid_format_1?
+    def valid_v1?
       match = MATCHER_V1.match(tin)
       return false unless match
 
@@ -46,7 +46,7 @@ module TinValid
       end
     end
 
-    def valid_format_2?
+    def valid_v2?
       MATCHER_V2.match?(tin)
     end
   end
