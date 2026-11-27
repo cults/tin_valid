@@ -3,6 +3,7 @@
 Features:
 - Add `kind: "company"` to only accept SIRET and SIREN on companies for France 🇫🇷
 - Add `#normalized` to normalize all TINs
+- Accept company TINs for Hungary (Adószám) 🇭🇺
 
 ## 1.3.2 - 2026-05-25
 
