@@ -24,6 +24,8 @@ module TinValid
       match[:check].to_i == checksum
     end
 
+    def normalized = tin
+
     private
 
     MATCHER = %r{

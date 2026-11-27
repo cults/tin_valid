@@ -8,9 +8,9 @@ module TinValid
 
     attr_reader :tin
 
-    def valid?
-      valid_v1? || valid_v2?
-    end
+    def valid? = valid_v1? || valid_v2?
+
+    def normalized = tin
 
     private
 

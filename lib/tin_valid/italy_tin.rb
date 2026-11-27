@@ -20,6 +20,8 @@ module TinValid
       tin[-1] == check
     end
 
+    def normalized = tin
+
     private
 
     def valid_date?(match)

@@ -28,6 +28,8 @@ module TinValid
       luhn_valid?
     end
 
+    def normalized = tin
+
     private
 
     def valid_v1?

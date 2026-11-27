@@ -14,6 +14,8 @@ module TinValid
       tin[-1].to_i == check
     end
 
+    def normalized = tin
+
     private
 
     # Check digit by the international standard ISO 7064 (MOD 11, 10).

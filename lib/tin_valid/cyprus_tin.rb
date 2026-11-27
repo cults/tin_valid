@@ -9,9 +9,9 @@ module TinValid
 
     attr_reader :tin, :kind
 
-    def valid?
-      matcher.match?(tin) && check == tin[-1]
-    end
+    def valid? = matcher.match?(tin) && check == tin[-1]
+
+    def normalized = tin
 
     private
 

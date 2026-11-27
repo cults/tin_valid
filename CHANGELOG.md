@@ -2,7 +2,7 @@
 
 Features:
 - Add `kind: "company"` to only accept SIRET and SIREN on companies for France 🇫🇷
-- Add `#normalized` to `TinValid::Tin` to normalize for Austria 🇦🇹, Belgium 🇧🇪, Czechia 🇨🇿, Denmark 🇩🇰, and Slovakia 🇸🇰
+- Add `#normalized` to normalize all TINs
 
 ## 1.3.2 - 2026-05-25
 

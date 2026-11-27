@@ -13,6 +13,8 @@ module TinValid
 
     def valid? = valid_v1? || valid_v2?
 
+    def normalized = tin
+
     private
 
     MATCHER_V1 = %r{

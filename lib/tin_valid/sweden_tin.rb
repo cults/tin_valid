@@ -25,6 +25,8 @@ module TinValid
       end
     end
 
+    def normalized = tin
+
     private
 
     VERSIONS = [
